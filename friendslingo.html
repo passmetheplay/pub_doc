@@ -1,0 +1,398 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>职场英语 - 沉浸式商务英语听力训练</title>
+    <meta name="description" content="让职场英语学习更高效，用真实场景对话提升商务沟通能力">
+    <meta name="keywords" content="职场英语, 商务英语, 英语听力, 沉浸学习, 中英双语, 离线学习, 碎片时间, 面试英语, 外企英语">
+    <style>
+        :root {
+            --primary-color: #2563EB;
+            --secondary-color: #1E40AF;
+            --text-color: #1F2937;
+            --light-bg: #F3F4F6;
+            --white: #ffffff;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+            line-height: 1.6;
+            color: var(--text-color);
+            margin: 0;
+            padding: 0;
+            background-color: var(--white);
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(135deg, #EFF6FF 0%, #DBEAFE 100%);
+            padding: 60px 0;
+            text-align: center;
+        }
+
+        .hero h1 {
+            color: var(--primary-color);
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+        }
+
+        .hero .subtitle {
+            font-size: 1.25rem;
+            color: #4B5563;
+            margin-bottom: 30px;
+        }
+
+        .hero .intro {
+            max-width: 600px;
+            margin: 0 auto;
+            font-size: 1.1rem;
+            color: #4B5563;
+        }
+
+        /* Section Styles */
+        section {
+            padding: 40px 0;
+            border-bottom: 1px solid #E5E7EB;
+        }
+
+        section:last-of-type {
+            border-bottom: none;
+        }
+
+        h2 {
+            color: var(--text-color);
+            font-size: 1.8rem;
+            margin-bottom: 30px;
+            text-align: center;
+            position: relative;
+        }
+
+        h2::after {
+            content: '';
+            display: block;
+            width: 60px;
+            height: 4px;
+            background-color: var(--primary-color);
+            margin: 10px auto 0;
+            border-radius: 2px;
+        }
+
+        h3 {
+            color: var(--secondary-color);
+            font-size: 1.3rem;
+            margin-top: 25px;
+            margin-bottom: 15px;
+            display: flex;
+            align-items: center;
+        }
+
+        /* Highlights */
+        .highlight-item {
+            margin-bottom: 30px;
+            background: var(--white);
+        }
+
+        .highlight-list {
+            list-style: none;
+            padding: 0;
+        }
+
+        .highlight-list li {
+            margin-bottom: 10px;
+            padding-left: 20px;
+            position: relative;
+        }
+
+        .highlight-list li::before {
+            content: "•";
+            color: var(--primary-color);
+            font-weight: bold;
+            position: absolute;
+            left: 0;
+        }
+
+        /* Grid Layouts for Audience & Usage */
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+        }
+
+        .card {
+            background: var(--light-bg);
+            padding: 20px;
+            border-radius: 12px;
+            transition: transform 0.2s;
+        }
+
+        .card:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+        }
+
+        .card h4 {
+            margin-top: 0;
+            color: var(--primary-color);
+        }
+
+        .card ul {
+            padding-left: 20px;
+            margin-bottom: 0;
+        }
+
+        /* Feature Text */
+        .feature-text {
+            background-color: #EFF6FF;
+            padding: 30px;
+            border-radius: 12px;
+            text-align: justify;
+        }
+
+        /* Tags */
+        .tags {
+            text-align: center;
+            padding: 20px 0;
+        }
+
+        .tag {
+            display: inline-block;
+            background: #E5E7EB;
+            padding: 5px 10px;
+            border-radius: 15px;
+            margin: 5px;
+            font-size: 0.9rem;
+            color: #4B5563;
+        }
+
+        /* Contact Section (Critical for App Store) */
+        .contact-section {
+            background-color: #1F2937;
+            color: white;
+            padding: 40px 0;
+            text-align: center;
+        }
+
+        .contact-section h2 {
+            color: white;
+            border-bottom-color: #4B5563;
+        }
+
+        .contact-btn {
+            display: inline-block;
+            background-color: var(--primary-color);
+            color: white;
+            padding: 12px 24px;
+            border-radius: 6px;
+            text-decoration: none;
+            font-weight: bold;
+            margin-top: 20px;
+            transition: background 0.2s;
+        }
+
+        .contact-btn:hover {
+            background-color: var(--secondary-color);
+        }
+
+        .contact-info {
+            background-color: rgba(255, 255, 255, 0.1);
+            padding: 20px;
+            border-radius: 8px;
+            display: inline-block;
+            margin-top: 20px;
+            text-align: left;
+        }
+
+        .footer {
+            text-align: center;
+            padding: 20px;
+            color: #666;
+            font-size: 0.9rem;
+            background-color: #f3f4f6;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="hero">
+        <div class="container">
+            <h1>职场英语</h1>
+            <div class="subtitle">沉浸式商务英语听力训练</div>
+            <p class="intro">让职场英语学习更高效，用真实场景对话提升商务沟通能力。<br>专为职场人士打造，从容应对工作中的英语沟通场景。</p>
+        </div>
+    </div>
+
+    <div class="container">
+        <!-- Highlights -->
+        <section>
+            <h2>🌟 应用亮点</h2>
+
+            <div class="highlight-item">
+                <h3>1. 真实职场场景，情景式学习</h3>
+                <ul class="highlight-list">
+                    <li><strong>专业教学内容</strong>：精选67集真实职场情景剧，覆盖完整职场成长路径</li>
+                    <li><strong>场景覆盖全面</strong>：面试技巧、会议沟通、商务谈判、电话礼仪、邮件往来等核心职场场景</li>
+                    <li><strong>角色代入学习</strong>：跟随主角的职场成长之路，在故事中自然习得职场英语</li>
+                </ul>
+            </div>
+
+            <div class="highlight-item">
+                <h3>2. 精听训练，逐句攻克听力难关</h3>
+                <ul class="highlight-list">
+                    <li><strong>中英双语字幕</strong>：实时同步显示，听不懂也能看懂</li>
+                    <li><strong>字幕模式切换</strong>：支持纯英文、纯中文、中英双语、无字幕四种模式</li>
+                    <li><strong>AB循环播放</strong>：自定义选取任意片段反复播放，针对性训练听力薄弱点</li>
+                    <li><strong>语速智能调节</strong>：0.5x-2x倍速随心切换，适应不同水平学习者</li>
+                </ul>
+            </div>
+
+            <div class="highlight-item">
+                <h3>3. 生词收藏，高效积累职场词汇</h3>
+                <ul class="highlight-list">
+                    <li><strong>一键查词</strong>：点击字幕中的单词即可查看释义，无需切换应用</li>
+                    <li><strong>单词收藏</strong>：重点职场词汇一键收藏，建立个人词库</li>
+                    <li><strong>句子收藏</strong>：实用表达句型随时收藏，方便复习模仿</li>
+                    <li><strong>PDF导出</strong>：收藏内容支持导出PDF，离线复习更便捷</li>
+                </ul>
+            </div>
+
+            <div class="highlight-item">
+                <h3>4. 学习数据，科学追踪进步轨迹</h3>
+                <ul class="highlight-list">
+                    <li><strong>学习统计</strong>：记录总学习时长、今日学习时间、学习集数</li>
+                    <li><strong>进度可视化</strong>：热力图直观展示每集学习完成度</li>
+                    <li><strong>断点续播</strong>：自动记录学习进度，随时继续上次内容</li>
+                    <li><strong>完成率统计</strong>：清晰了解整体学习进展</li>
+                </ul>
+            </div>
+
+            <div class="highlight-item">
+                <h3>5. 碎片化学习，随时随地提升英语</h3>
+                <ul class="highlight-list">
+                    <li><strong>离线下载</strong>：提前下载课程内容，无网络也能学习</li>
+                    <li><strong>后台播放</strong>：锁屏状态继续播放，通勤时光不浪费</li>
+                    <li><strong>进度记忆</strong>：自动保存播放位置，随时恢复学习</li>
+                    <li><strong>多主题切换</strong>：浅色/深色模式自由切换，护眼学习</li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- Audience -->
+        <section>
+            <h2>🎯 适用人群</h2>
+            <div class="grid">
+                <div class="card">
+                    <h4>职场新人</h4>
+                    <ul>
+                        <li>掌握面试常用表达，自信应对英语面试</li>
+                        <li>学习职场基础礼仪用语，快速融入国际团队</li>
+                        <li>熟悉办公室日常沟通，提升职场英语自信</li>
+                    </ul>
+                </div>
+                <div class="card">
+                    <h4>外企员工</h4>
+                    <ul>
+                        <li>提升商务会议沟通能力，从容参与国际会议</li>
+                        <li>学习专业汇报表达，清晰展示工作成果</li>
+                        <li>掌握跨部门协作用语，高效推进项目合作</li>
+                    </ul>
+                </div>
+                <div class="card">
+                    <h4>英语学习者</h4>
+                    <ul>
+                        <li>真实语料训练，告别"哑巴英语"</li>
+                        <li>场景化学习，活学活用</li>
+                        <li>从慢速到原速，循序渐进提升</li>
+                    </ul>
+                </div>
+                <div class="card">
+                    <h4>考试备考者</h4>
+                    <ul>
+                        <li>BEC商务英语备考，熟悉商务场景表达</li>
+                        <li>雅思口语素材积累，拓展话题表达能力</li>
+                        <li>职场英语面试准备，自信应对英语面试</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- Use Cases -->
+        <section>
+            <h2>💡 使用场景</h2>
+            <div class="grid">
+                <div class="card">
+                    <h4>🚇 通勤路上</h4>
+                    <p>地铁公交上戴上耳机，碎片时间高效学习</p>
+                </div>
+                <div class="card">
+                    <h4>☕ 午休间隙</h4>
+                    <p>15分钟精听一集，轻松提升职场英语</p>
+                </div>
+                <div class="card">
+                    <h4>🌙 睡前放松</h4>
+                    <p>听职场故事入睡，潜移默化培养语感</p>
+                </div>
+                <div class="card">
+                    <h4>📅 周末充电</h4>
+                    <p>集中时间系统学习，加速职场英语进步</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Product Features Intro -->
+        <section>
+            <h2>📱 产品特色</h2>
+            <div class="feature-text">
+                <p>职场英语致力于让职场英语学习变得简单高效。精选专业教学内容，融合沉浸式学习体验，帮助每一位职场人士在真实语境中自然习得地道商务英语。无论你是刚步入职场的新人，还是希望提升国际沟通能力的资深员工，职场英语都是你最可靠的职场英语学习伙伴。
+                </p>
+                <p style="text-align: center; margin-top: 20px; font-weight: bold; color: var(--primary-color);">
+                    立即下载，开启你的职场英语进阶之旅！</p>
+            </div>
+        </section>
+
+        <!-- Tags -->
+        <div class="tags">
+            <span class="tag">#职场英语</span>
+            <span class="tag">#商务英语</span>
+            <span class="tag">#英语听力</span>
+            <span class="tag">#沉浸学习</span>
+            <span class="tag">#中英双语</span>
+            <span class="tag">#离线学习</span>
+            <span class="tag">#碎片时间</span>
+            <span class="tag">#面试英语</span>
+            <span class="tag">#外企英语</span>
+        </div>
+    </div>
+
+    <!-- Support Section (App Store Requirement) -->
+    <div class="contact-section">
+        <div class="container">
+            <h2>技术支持 (Support)</h2>
+            <p>如果您在使用过程中遇到任何问题，或有功能建议，请联系我们：</p>
+
+            <div class="contact-info">
+                <p>📧 <strong>客服邮箱：</strong> <a href="mailto:bo.xu@163.com" style="color: #60A5FA;">bo.xu@163.com</a>
+                </p>
+            </div>
+
+            <p style="margin-top: 20px; font-size: 0.9em; opacity: 0.8;">
+                为了更快解决您的问题，邮件中请注明可以复现问题的步骤或截图。
+            </p>
+        </div>
+    </div>
+
+    <div class="footer">
+        <p>&copy; 2026 FriendsLingo Team. All rights reserved.</p>
+    </div>
+
+</body>
+
+</html>
