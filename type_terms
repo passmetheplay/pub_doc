@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>会员协议 - 打字练习</title>
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #f9f9f9;
+        }
+        .container {
+            background-color: white;
+            padding: 40px;
+            border-radius: 12px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+        }
+        h1 {
+            color: #3B82F6;
+            border-bottom: 2px solid #eee;
+            padding-bottom: 10px;
+        }
+        h2 {
+            font-size: 1.25em;
+            color: #1F2937;
+            margin-top: 30px;
+            border-left: 4px solid #3B82F6;
+            padding-left: 10px;
+        }
+        p, li {
+            font-size: 0.95em;
+            color: #4B5563;
+        }
+        ul {
+            padding-left: 20px;
+        }
+        li {
+            margin-bottom: 8px;
+        }
+        .date {
+            text-align: right;
+            color: #999;
+            font-size: 0.85em;
+            margin-top: 40px;
+        }
+        strong {
+            color: #333;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 15px 0;
+        }
+        th, td {
+            border: 1px solid #E5E7EB;
+            padding: 10px 14px;
+            text-align: left;
+            font-size: 0.95em;
+        }
+        th {
+            background-color: #F3F4F6;
+            color: #1F2937;
+            font-weight: 600;
+        }
+        td {
+            color: #4B5563;
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+
+    <h1>《打字练习》使用条款</h1>
+
+    <p>在使用打字练习及购买会员服务之前，请您务必仔细阅读以下使用条款。</p>
+
+    <h2>协议生效</h2>
+    <p>本协议自2026年2月6日起生效。</p>
+
+    <h2>会员购买</h2>
+    <p>打字练习提供终身会员服务，为一次性买断制，购买后永久享有全部会员权益，无需续费。</p>
+
+    <h2>会员权益</h2>
+    <p>成为会员后，您将享受以下权益：</p>
+    <ul>
+        <li>无限次练习，不受每日次数限制</li>
+        <li>全部练习内容解锁（拼音、词组、句子、文章、英文）</li>
+        <li>完整的练习记录和数据统计</li>
+        <li>错题本和键位热力图</li>
+        <li>后续新增更多会员权益</li>
+    </ul>
+
+    <h2>免费用户限制</h2>
+    <p>免费用户享有基础练习功能，但存在以下限制：</p>
+    <table>
+        <tr>
+            <th>功能</th>
+            <th>免费用户</th>
+            <th>会员用户</th>
+        </tr>
+        <tr>
+            <td>每日练习次数</td>
+            <td>有限次</td>
+            <td>无限次</td>
+        </tr>
+        <tr>
+            <td>练习内容</td>
+            <td>基础内容</td>
+            <td>全部内容</td>
+        </tr>
+        <tr>
+            <td>练习记录</td>
+            <td>支持</td>
+            <td>支持</td>
+        </tr>
+        <tr>
+            <td>错题本</td>
+            <td>支持</td>
+            <td>支持</td>
+        </tr>
+    </table>
+
+    <h2>费用调整</h2>
+    <p>我们会持续审视会员的价格，并进行相关调整。价格调整不影响已购买终身会员的用户权益。我们会提前通过应用内通知的方式告知价格变更。</p>
+
+    <h2>用户行为规范</h2>
+    <p>使用本应用时，用户应遵守以下规范：</p>
+    <ul>
+        <li>不得尝试攻击、破解或滥用应用服务</li>
+        <li>不得将应用内容用于商业用途或公开传播</li>
+        <li>不得冒充他人或进行欺诈行为</li>
+        <li>如违反上述规范，我们有权暂停或终止服务</li>
+    </ul>
+
+    <h2>数据隐私保护</h2>
+    <p>我们严格保护用户隐私和数据安全：</p>
+    <ul>
+        <li>用户练习数据存储在设备本地</li>
+        <li>严格遵守相关数据保护法律法规</li>
+        <li>不会向第三方泄露个人信息</li>
+        <li>用户可随时删除个人数据（卸载应用即可）</li>
+    </ul>
+
+    <h2>服务承诺</h2>
+    <ul>
+        <li>我们致力于提供稳定可靠的打字练习服务</li>
+        <li>定期进行系统维护和功能更新</li>
+        <li>持续丰富练习素材内容</li>
+        <li>响应用户反馈和技术问题</li>
+    </ul>
+
+    <h2>退款政策</h2>
+    <ul>
+        <li>终身会员为一次性购买，原则上不予退款</li>
+        <li>如遇特殊情况，请联系 Apple 客服处理退款事宜</li>
+    </ul>
+
+    <h2>免责声明</h2>
+    <ul>
+        <li>因不可抗力导致的服务中断，我们不承担责任</li>
+        <li>用户违规使用造成的后果由用户自行承担</li>
+        <li>练习数据丢失造成的损失，我们不承担责任，建议用户定期备份设备</li>
+    </ul>
+
+    <h2>条款更新</h2>
+    <p>我们会根据需要更新使用条款，届时会通过应用内推送等方式告知用户。重要条款变更将提前30天通知用户。</p>
+
+    <h2>争议解决</h2>
+    <p>本协议适用中华人民共和国法律法规。如有争议，优先通过友好协商解决，协商不成可向有管辖权的人民法院提起诉讼。</p>
+
+    <h2>联系我们</h2>
+    <p>如果您对本协议有任何疑问，请通过以下方式联系我们：</p>
+    <ul>
+        <li>邮箱：<a href="mailto:bo.xu@163.com" style="color: #3B82F6;">bo.xu@163.com</a></li>
+    </ul>
+
+    <p class="date">最后更新时间：2026年2月6日</p>
+
+    <p style="text-align: center; color: #6B7280; margin-top: 20px;">感谢您选择打字练习，我们将持续为您提供优质的打字练习服务！</p>
+
+</div>
+</body>
+</html>
