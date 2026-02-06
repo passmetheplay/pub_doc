@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>打字练习 - 中英文打字练习训练</title>
+    <meta name="description" content="专业的中英文打字练习工具，拼音入门、词组训练、文章练习，科学提升打字速度与准确率">
+    <meta name="keywords" content="打字练习, 拼音打字, 中文打字, 英文打字, 打字训练, 输入法练习, 打字速度, 词组练习, 文章练习">
+    <style>
+        :root {
+            --primary-color: #3B82F6;
+            --secondary-color: #2563EB;
+            --text-color: #1F2937;
+            --light-bg: #F3F4F6;
+            --white: #ffffff;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+            line-height: 1.6;
+            color: var(--text-color);
+            margin: 0;
+            padding: 0;
+            background-color: var(--white);
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(135deg, #EFF6FF 0%, #DBEAFE 100%);
+            padding: 60px 0;
+            text-align: center;
+        }
+
+        .hero h1 {
+            color: var(--primary-color);
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+        }
+
+        .hero .subtitle {
+            font-size: 1.25rem;
+            color: #4B5563;
+            margin-bottom: 30px;
+        }
+
+        .hero .intro {
+            max-width: 600px;
+            margin: 0 auto;
+            font-size: 1.1rem;
+            color: #4B5563;
+        }
+
+        /* Section Styles */
+        section {
+            padding: 40px 0;
+            border-bottom: 1px solid #E5E7EB;
+        }
+
+        section:last-of-type {
+            border-bottom: none;
+        }
+
+        h2 {
+            color: var(--text-color);
+            font-size: 1.8rem;
+            margin-bottom: 30px;
+            text-align: center;
+            position: relative;
+        }
+
+        h2::after {
+            content: '';
+            display: block;
+            width: 60px;
+            height: 4px;
+            background-color: var(--primary-color);
+            margin: 10px auto 0;
+            border-radius: 2px;
+        }
+
+        h3 {
+            color: var(--secondary-color);
+            font-size: 1.3rem;
+            margin-top: 25px;
+            margin-bottom: 15px;
+            display: flex;
+            align-items: center;
+        }
+
+        /* Highlights */
+        .highlight-item {
+            margin-bottom: 30px;
+            background: var(--white);
+        }
+
+        .highlight-list {
+            list-style: none;
+            padding: 0;
+        }
+
+        .highlight-list li {
+            margin-bottom: 10px;
+            padding-left: 20px;
+            position: relative;
+        }
+
+        .highlight-list li::before {
+            content: "•";
+            color: var(--primary-color);
+            font-weight: bold;
+            position: absolute;
+            left: 0;
+        }
+
+        /* Grid */
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+        }
+
+        .card {
+            background: var(--light-bg);
+            padding: 20px;
+            border-radius: 12px;
+            transition: transform 0.2s;
+        }
+
+        .card:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+        }
+
+        .card h4 {
+            margin-top: 0;
+            color: var(--primary-color);
+        }
+
+        .card ul {
+            padding-left: 20px;
+            margin-bottom: 0;
+        }
+
+        /* Feature Text */
+        .feature-text {
+            background-color: #EFF6FF;
+            padding: 30px;
+            border-radius: 12px;
+            text-align: justify;
+        }
+
+        /* Tags */
+        .tags {
+            text-align: center;
+            padding: 20px 0;
+        }
+
+        .tag {
+            display: inline-block;
+            background: #E5E7EB;
+            padding: 5px 10px;
+            border-radius: 15px;
+            margin: 5px;
+            font-size: 0.9rem;
+            color: #4B5563;
+        }
+
+        /* Contact Section */
+        .contact-section {
+            background-color: #1F2937;
+            color: white;
+            padding: 40px 0;
+            text-align: center;
+        }
+
+        .contact-section h2 {
+            color: white;
+        }
+
+        .contact-section h2::after {
+            background-color: #60A5FA;
+        }
+
+        .contact-info {
+            background-color: rgba(255, 255, 255, 0.1);
+            padding: 20px;
+            border-radius: 8px;
+            display: inline-block;
+            margin-top: 20px;
+            text-align: left;
+        }
+
+        .footer {
+            text-align: center;
+            padding: 20px;
+            color: #666;
+            font-size: 0.9rem;
+            background-color: #f3f4f6;
+        }
+    </style>
+</head>
+<body>
+
+<div class="hero">
+    <div class="container">
+        <h1>打字练习</h1>
+        <div class="subtitle">中英文打字练习训练</div>
+        <p class="intro">
+            科学系统的打字练习工具，从拼音入门到文章精练。<br>
+            帮助你快速提升打字速度与准确率，让每一次输入都更高效。
+        </p>
+    </div>
+</div>
+
+<div class="container">
+
+    <!-- Highlights -->
+    <section>
+        <h2>🌟 应用亮点</h2>
+
+        <div class="highlight-item">
+            <h3>1. 系统化练习，从零开始进阶</h3>
+            <ul class="highlight-list">
+                <li><strong>拼音入门</strong>：声母、韵母、音节逐步练习，为中文打字打好基础</li>
+                <li><strong>词组训练</strong>：二字、三字、四字词语分级练习，提升连续输入能力</li>
+                <li><strong>句子练习</strong>：日常短句、名言警句，训练完整句子的输入流畅度</li>
+                <li><strong>文章精练</strong>：小学到高中经典课文、唐诗宋词，在文学中提升打字水平</li>
+            </ul>
+        </div>
+
+        <div class="highlight-item">
+            <h3>2. 中英双语，全面覆盖</h3>
+            <ul class="highlight-list">
+                <li><strong>中文模式</strong>：拼音提示辅助输入，适合各种中文输入法练习</li>
+                <li><strong>英文模式</strong>：单词、句子、短文三级训练，附带中文释义</li>
+                <li><strong>智能切换</strong>：中英文练习自由切换，一个应用满足所有需求</li>
+            </ul>
+        </div>
+
+        <div class="highlight-item">
+            <h3>3. 实时反馈，精准纠错</h3>
+            <ul class="highlight-list">
+                <li><strong>逐字判定</strong>：每个字符实时标记正确或错误，即时了解输入状态</li>
+                <li><strong>拼音提示</strong>：中文模式下显示拼音，帮助识别生僻字</li>
+                <li><strong>震动反馈</strong>：输入错误时震动提示，形成肌肉记忆</li>
+                <li><strong>错误回顾</strong>：练习结束后清晰展示正确、错误、未输入的字符</li>
+            </ul>
+        </div>
+
+        <div class="highlight-item">
+            <h3>4. 数据统计，科学追踪进步</h3>
+            <ul class="highlight-list">
+                <li><strong>速度统计</strong>：实时显示每分钟输入字数，量化打字速度</li>
+                <li><strong>准确率追踪</strong>：精确计算输入准确率，发现薄弱环节</li>
+                <li><strong>练习记录</strong>：完整保存每次练习数据，回顾历史表现</li>
+                <li><strong>等级评定</strong>：根据速度和准确率综合评分，激励持续进步</li>
+            </ul>
+        </div>
+
+        <div class="highlight-item">
+            <h3>5. 错题本，针对性强化</h3>
+            <ul class="highlight-list">
+                <li><strong>自动收录</strong>：练习中的错误字符自动记录到错题本</li>
+                <li><strong>错误统计</strong>：按错误频次排序，重点攻克高频错字</li>
+                <li><strong>键位热力图</strong>：可视化展示键位错误分布，精准定位薄弱键位</li>
+            </ul>
+        </div>
+    </section>
+
+    <!-- Audience -->
+    <section>
+        <h2>🎯 适用人群</h2>
+        <div class="grid">
+            <div class="card">
+                <h4>打字初学者</h4>
+                <ul>
+                    <li>从拼音声母韵母开始，零基础入门</li>
+                    <li>循序渐进的练习体系，轻松上手</li>
+                    <li>拼音提示辅助，降低学习门槛</li>
+                </ul>
+            </div>
+            <div class="card">
+                <h4>学生群体</h4>
+                <ul>
+                    <li>课文内容同步练习，学习打字两不误</li>
+                    <li>古诗词背诵与打字结合，一举两得</li>
+                    <li>英文单词练习，巩固词汇记忆</li>
+                </ul>
+            </div>
+            <div class="card">
+                <h4>办公人士</h4>
+                <ul>
+                    <li>提升日常办公打字效率</li>
+                    <li>中英文切换练习，适应工作需求</li>
+                    <li>碎片时间练习，不影响工作节奏</li>
+                </ul>
+            </div>
+            <div class="card">
+                <h4>输入法学习者</h4>
+                <ul>
+                    <li>适配各种中文输入法练习</li>
+                    <li>词组模式训练，提升输入法词组能力</li>
+                    <li>从单字到长文，全面提升输入速度</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- Use Cases -->
+    <section>
+        <h2>💡 使用场景</h2>
+        <div class="grid">
+            <div class="card">
+                <h4>📱 随时随地</h4>
+                <p>手机端练习，通勤、排队、等人时都能练几分钟</p>
+            </div>
+            <div class="card">
+                <h4>📖 课后巩固</h4>
+                <p>用课文内容练习打字，复习知识的同时提升输入速度</p>
+            </div>
+            <div class="card">
+                <h4>🎯 专项突破</h4>
+                <p>针对薄弱环节集中练习，快速提升特定类型的输入能力</p>
+            </div>
+            <div class="card">
+                <h4>📊 每日打卡</h4>
+                <p>养成每日练习习惯，持续追踪进步轨迹</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Product Features -->
+    <section>
+        <h2>📱 产品特色</h2>
+        <div class="feature-text">
+            <p>打字练习致力于让打字练习变得简单高效。精心设计的分级练习体系，从拼音入门到文章精练，覆盖中英文全场景。无论你是刚开始学习打字的初学者，还是希望进一步提升输入速度的进阶用户，打字练习都能为你提供科学系统的练习方案。</p>
+            <p>每次练习都有详细的数据反馈，帮助你了解自己的进步和不足。错题本功能让你精准定位薄弱环节，针对性强化训练。让每一次练习都有价值，让每一次输入都更自信。</p>
+            <p style="text-align: center; margin-top: 20px; font-weight: bold; color: var(--primary-color);">
+                立即下载，开启你的打字进阶之旅！
+            </p>
+        </div>
+    </section>
+
+    <!-- Tags -->
+    <div class="tags">
+        <span class="tag">#打字练习</span>
+        <span class="tag">#拼音打字</span>
+        <span class="tag">#中文打字</span>
+        <span class="tag">#英文打字</span>
+        <span class="tag">#打字训练</span>
+        <span class="tag">#输入法练习</span>
+        <span class="tag">#打字速度</span>
+        <span class="tag">#词组练习</span>
+        <span class="tag">#古诗词</span>
+    </div>
+</div>
+
+<!-- Support Section -->
+<div class="contact-section">
+    <div class="container">
+        <h2>技术支持 (Support)</h2>
+        <p>如果您在使用过程中遇到任何问题，或有功能建议，请联系我们：</p>
+        <div class="contact-info">
+            <p>📧 <strong>客服邮箱：</strong> <a href="mailto:bo.xu@163.com" style="color: #60A5FA;">bo.xu@163.com</a></p>
+        </div>
+        <p style="margin-top: 20px; font-size: 0.9em; opacity: 0.8;">
+            为了更快解决您的问题，邮件中请注明可以复现问题的步骤或截图。
+        </p>
+    </div>
+</div>
+
+<div class="footer">
+    <p>&copy; 2026 FriendsLingo Team. All rights reserved.</p>
+</div>
+
+</body>
+</html>
