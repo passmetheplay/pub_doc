@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>拼音学习 - 拍照识别·课本同步·拼音表</title>
+    <meta name="description" content="一站式拼音学习工具，拍照识别汉字拼音，小学课本同步学习，完整拼音表查询，笔画动画演示，让拼音学习更高效、更有趣">
+    <meta name="keywords" content="拼音学习, 拼音识别, 拍照识别, 汉字拼音, 课本同步, 拼音表, 笔画顺序, 声母韵母, 小学拼音, 拼音测验">
+    <style>
+        :root {
+            --primary-color: #4A90D9;
+            --secondary-color: #3A7BC8;
+            --accent-color: #FF6525;
+            --text-color: #1F2937;
+            --light-bg: #F3F4F6;
+            --white: #ffffff;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+            line-height: 1.6;
+            color: var(--text-color);
+            margin: 0;
+            padding: 0;
+            background-color: var(--white);
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(135deg, #EBF4FF 0%, #D6E8FF 100%);
+            padding: 60px 0;
+            text-align: center;
+        }
+
+        .hero h1 {
+            color: var(--primary-color);
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+        }
+
+        .hero .subtitle {
+            font-size: 1.25rem;
+            color: #4B5563;
+            margin-bottom: 30px;
+        }
+
+        .hero .intro {
+            max-width: 600px;
+            margin: 0 auto;
+            font-size: 1.1rem;
+            color: #4B5563;
+        }
+
+        /* Section Styles */
+        section {
+            padding: 40px 0;
+            border-bottom: 1px solid #E5E7EB;
+        }
+
+        section:last-of-type {
+            border-bottom: none;
+        }
+
+        h2 {
+            color: var(--text-color);
+            font-size: 1.8rem;
+            margin-bottom: 30px;
+            text-align: center;
+            position: relative;
+        }
+
+        h2::after {
+            content: '';
+            display: block;
+            width: 60px;
+            height: 4px;
+            background-color: var(--primary-color);
+            margin: 10px auto 0;
+            border-radius: 2px;
+        }
+
+        h3 {
+            color: var(--secondary-color);
+            font-size: 1.3rem;
+            margin-top: 25px;
+            margin-bottom: 15px;
+            display: flex;
+            align-items: center;
+        }
+
+        /* Highlights */
+        .highlight-item {
+            margin-bottom: 30px;
+            background: var(--white);
+        }
+
+        .highlight-list {
+            list-style: none;
+            padding: 0;
+        }
+
+        .highlight-list li {
+            margin-bottom: 10px;
+            padding-left: 20px;
+            position: relative;
+        }
+
+        .highlight-list li::before {
+            content: "•";
+            color: var(--primary-color);
+            font-weight: bold;
+            position: absolute;
+            left: 0;
+        }
+
+        /* Grid */
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+        }
+
+        .card {
+            background: var(--light-bg);
+            padding: 20px;
+            border-radius: 12px;
+            transition: transform 0.2s;
+        }
+
+        .card:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+        }
+
+        .card h4 {
+            margin-top: 0;
+            color: var(--primary-color);
+        }
+
+        .card ul {
+            padding-left: 20px;
+            margin-bottom: 0;
+        }
+
+        /* Feature Text */
+        .feature-text {
+            background-color: #EBF4FF;
+            padding: 30px;
+            border-radius: 12px;
+            text-align: justify;
+        }
+
+        /* Tags */
+        .tags {
+            text-align: center;
+            padding: 20px 0;
+        }
+
+        .tag {
+            display: inline-block;
+            background: #E5E7EB;
+            padding: 5px 10px;
+            border-radius: 15px;
+            margin: 5px;
+            font-size: 0.9rem;
+            color: #4B5563;
+        }
+
+        /* Contact Section */
+        .contact-section {
+            background-color: #1F2937;
+            color: white;
+            padding: 40px 0;
+            text-align: center;
+        }
+
+        .contact-section h2 {
+            color: white;
+        }
+
+        .contact-section h2::after {
+            background-color: #60A5FA;
+        }
+
+        .contact-info {
+            background-color: rgba(255, 255, 255, 0.1);
+            padding: 20px;
+            border-radius: 8px;
+            display: inline-block;
+            margin-top: 20px;
+            text-align: left;
+        }
+
+        .footer {
+            text-align: center;
+            padding: 20px;
+            color: #666;
+            font-size: 0.9rem;
+            background-color: #f3f4f6;
+        }
+    </style>
+</head>
+<body>
+
+<div class="hero">
+    <div class="container">
+        <h1>拼音学习</h1>
+        <div class="subtitle">拍照识别 · 课本同步 · 拼音表</div>
+        <p class="intro">
+            一站式拼音学习工具，拍照即可识别汉字拼音。<br>
+            课本同步、完整拼音表、笔画动画，让拼音学习更高效、更有趣。
+        </p>
+    </div>
+</div>
+
+<div class="container">
+
+    <!-- Highlights -->
+    <section>
+        <h2>🌟 应用亮点</h2>
+
+        <div class="highlight-item">
+            <h3>1. 拍照识别，即拍即学</h3>
+            <ul class="highlight-list">
+                <li><strong>相机识别</strong>：对准课本或文字拍照，自动识别并标注拼音</li>
+                <li><strong>AI 驱动</strong>：智能识别汉字，准确标注拼音和声调</li>
+                <li><strong>快速转换</strong>：输入任意汉字文本，一键生成带拼音标注的结果</li>
+                <li><strong>声调颜色</strong>：不同声调用不同颜色标注，一目了然</li>
+            </ul>
+        </div>
+
+        <div class="highlight-item">
+            <h3>2. 课本同步，跟着教材学</h3>
+            <ul class="highlight-list">
+                <li><strong>全年级覆盖</strong>：涵盖小学一年级至六年级语文课本内容</li>
+                <li><strong>课文朗读</strong>：每篇课文支持语音朗读，标准普通话发音</li>
+                <li><strong>拼音标注</strong>：课文内容自带拼音标注，边看边学</li>
+                <li><strong>进度追踪</strong>：自动记录学习进度，随时继续上次学习</li>
+            </ul>
+        </div>
+
+        <div class="highlight-item">
+            <h3>3. 完整拼音表，系统学习</h3>
+            <ul class="highlight-list">
+                <li><strong>声母韵母</strong>：全部声母、韵母分类展示，点击即可发音</li>
+                <li><strong>整体认读音节</strong>：16 个整体认读音节完整收录</li>
+                <li><strong>声调练习</strong>：四声调系统学习，掌握发音规律</li>
+                <li><strong>笔画动画</strong>：汉字笔画书写顺序动态演示，学写字更轻松</li>
+            </ul>
+        </div>
+
+        <div class="highlight-item">
+            <h3>4. 趣味测验，巩固学习</h3>
+            <ul class="highlight-list">
+                <li><strong>拼音选择</strong>：看汉字选拼音，检验学习效果</li>
+                <li><strong>声调判断</strong>：听发音选声调，强化声调记忆</li>
+                <li><strong>填写拼音</strong>：手动输入拼音，VIP 专属进阶练习</li>
+                <li><strong>即时反馈</strong>：答题后立即显示正误，帮助记忆</li>
+            </ul>
+        </div>
+
+        <div class="highlight-item">
+            <h3>5. 专业发音，标准朗读</h3>
+            <ul class="highlight-list">
+                <li><strong>男女声切换</strong>：提供男声和女声两种朗读模式</li>
+                <li><strong>单字发音</strong>：点击任意拼音即可听到标准发音</li>
+                <li><strong>课文朗读</strong>：整篇课文连续朗读，培养语感</li>
+            </ul>
+        </div>
+    </section>
+
+    <!-- Audience -->
+    <section>
+        <h2>🎯 适用人群</h2>
+        <div class="grid">
+            <div class="card">
+                <h4>学龄前儿童</h4>
+                <ul>
+                    <li>趣味拼音表，激发学习兴趣</li>
+                    <li>笔画动画演示，学认字更有趣</li>
+                    <li>标准发音跟读，打好拼音基础</li>
+                </ul>
+            </div>
+            <div class="card">
+                <h4>小学生</h4>
+                <ul>
+                    <li>课本同步，课堂学习的好帮手</li>
+                    <li>测验巩固，掌握每课拼音知识</li>
+                    <li>拍照识别，遇到不认识的字随时查</li>
+                </ul>
+            </div>
+            <div class="card">
+                <h4>家长</h4>
+                <ul>
+                    <li>辅导孩子学拼音的得力工具</li>
+                    <li>拍照识别，快速查询汉字拼音</li>
+                    <li>了解课本进度，同步辅导</li>
+                </ul>
+            </div>
+            <div class="card">
+                <h4>中文学习者</h4>
+                <ul>
+                    <li>系统学习汉语拼音发音</li>
+                    <li>文本拼音对照，辅助中文阅读</li>
+                    <li>声调练习，掌握四声发音</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- Use Cases -->
+    <section>
+        <h2>💡 使用场景</h2>
+        <div class="grid">
+            <div class="card">
+                <h4>📱 随拍随学</h4>
+                <p>遇到不认识的字，拿起手机拍一拍，拼音自动标注</p>
+            </div>
+            <div class="card">
+                <h4>📖 课前预习</h4>
+                <p>提前浏览课文内容和拼音，课堂学习更高效</p>
+            </div>
+            <div class="card">
+                <h4>🎯 课后复习</h4>
+                <p>通过趣味测验检验学习成果，查漏补缺</p>
+            </div>
+            <div class="card">
+                <h4>✍️ 写字练习</h4>
+                <p>看笔画动画学写字，掌握正确的书写顺序</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Product Features -->
+    <section>
+        <h2>📱 产品特色</h2>
+        <div class="feature-text">
+            <p>拼音学习致力于让拼音学习变得简单有趣。集拍照识别、课本同步、拼音表查询、笔画动画、趣味测验于一体，为孩子和家长打造一站式拼音学习平台。无论是课堂同步学习，还是日常查询汉字拼音，拼音学习都能满足你的需求。</p>
+            <p>AI 驱动的拍照识别功能，让你对准任何文字即可获取准确的拼音标注。课本同步内容覆盖小学全年级，配合专业语音朗读和趣味测验，让每一次学习都充满乐趣。笔画动画功能更是写字练习的好帮手，正确的书写顺序一看就会。</p>
+            <p style="text-align: center; margin-top: 20px; font-weight: bold; color: var(--primary-color);">
+                立即下载，开启拼音学习之旅！
+            </p>
+        </div>
+    </section>
+
+    <!-- Tags -->
+    <div class="tags">
+        <span class="tag">#拼音学习</span>
+        <span class="tag">#拍照识别</span>
+        <span class="tag">#课本同步</span>
+        <span class="tag">#拼音表</span>
+        <span class="tag">#笔画动画</span>
+        <span class="tag">#声母韵母</span>
+        <span class="tag">#小学语文</span>
+        <span class="tag">#拼音测验</span>
+        <span class="tag">#汉字学习</span>
+    </div>
+</div>
+
+<!-- Support Section -->
+<div class="contact-section">
+    <div class="container">
+        <h2>技术支持 (Support)</h2>
+        <p>如果您在使用过程中遇到任何问题，或有功能建议，请联系我们：</p>
+        <div class="contact-info">
+            <p>📧 <strong>客服邮箱：</strong> <a href="mailto:bo.xu@163.com" style="color: #60A5FA;">bo.xu@163.com</a></p>
+        </div>
+        <p style="margin-top: 20px; font-size: 0.9em; opacity: 0.8;">
+            为了更快解决您的问题，邮件中请注明可以复现问题的步骤或截图。
+        </p>
+    </div>
+</div>
+
+<div class="footer">
+    <p>&copy; 2026 FriendsLingo Team. All rights reserved.</p>
+</div>
+
+</body>
+</html>
