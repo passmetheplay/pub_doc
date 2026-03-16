@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>天天练普通话 - 普通话水平测试备考练习</title>
+    <meta name="description" content="专业的普通话水平测试（PSC）备考工具，涵盖字词朗读、短文朗读、命题说话全部题型，AI 智能评测助你高效备考">
+    <meta name="keywords" content="普通话, 普通话水平测试, PSC, 普通话考试, 朗读练习, 拼音, 声调, 语音评测, 普通话等级, 备考">
+    <style>
+        :root {
+            --primary-color: #E8812A;
+            --secondary-color: #D4711F;
+            --text-color: #1F2937;
+            --light-bg: #FFF8F2;
+            --white: #ffffff;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+            line-height: 1.6;
+            color: var(--text-color);
+            margin: 0;
+            padding: 0;
+            background-color: var(--white);
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(135deg, #FFF5EB 0%, #FFE8D4 100%);
+            padding: 60px 0;
+            text-align: center;
+        }
+
+        .hero h1 {
+            color: var(--primary-color);
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+        }
+
+        .hero .subtitle {
+            font-size: 1.25rem;
+            color: #4B5563;
+            margin-bottom: 30px;
+        }
+
+        .hero .intro {
+            max-width: 600px;
+            margin: 0 auto;
+            font-size: 1.1rem;
+            color: #4B5563;
+        }
+
+        /* Section Styles */
+        section {
+            padding: 40px 0;
+            border-bottom: 1px solid #E5E7EB;
+        }
+
+        section:last-of-type {
+            border-bottom: none;
+        }
+
+        h2 {
+            color: var(--text-color);
+            font-size: 1.8rem;
+            margin-bottom: 30px;
+            text-align: center;
+            position: relative;
+        }
+
+        h2::after {
+            content: '';
+            display: block;
+            width: 60px;
+            height: 4px;
+            background-color: var(--primary-color);
+            margin: 10px auto 0;
+            border-radius: 2px;
+        }
+
+        h3 {
+            color: var(--secondary-color);
+            font-size: 1.3rem;
+            margin-top: 25px;
+            margin-bottom: 15px;
+            display: flex;
+            align-items: center;
+        }
+
+        /* Highlights */
+        .highlight-item {
+            margin-bottom: 30px;
+            background: var(--white);
+        }
+
+        .highlight-list {
+            list-style: none;
+            padding: 0;
+        }
+
+        .highlight-list li {
+            margin-bottom: 10px;
+            padding-left: 20px;
+            position: relative;
+        }
+
+        .highlight-list li::before {
+            content: "•";
+            color: var(--primary-color);
+            font-weight: bold;
+            position: absolute;
+            left: 0;
+        }
+
+        /* Grid */
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+        }
+
+        .card {
+            background: var(--light-bg);
+            padding: 20px;
+            border-radius: 12px;
+            transition: transform 0.2s;
+        }
+
+        .card:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+        }
+
+        .card h4 {
+            margin-top: 0;
+            color: var(--primary-color);
+        }
+
+        .card ul {
+            padding-left: 20px;
+            margin-bottom: 0;
+        }
+
+        /* Feature Text */
+        .feature-text {
+            background-color: var(--light-bg);
+            padding: 30px;
+            border-radius: 12px;
+            text-align: justify;
+        }
+
+        /* Tags */
+        .tags {
+            text-align: center;
+            padding: 20px 0;
+        }
+
+        .tag {
+            display: inline-block;
+            background: #E5E7EB;
+            padding: 5px 10px;
+            border-radius: 15px;
+            margin: 5px;
+            font-size: 0.9rem;
+            color: #4B5563;
+        }
+
+        /* Contact Section */
+        .contact-section {
+            background-color: #1F2937;
+            color: white;
+            padding: 40px 0;
+            text-align: center;
+        }
+
+        .contact-section h2 {
+            color: white;
+        }
+
+        .contact-section h2::after {
+            background-color: #F0A060;
+        }
+
+        .contact-info {
+            background-color: rgba(255, 255, 255, 0.1);
+            padding: 20px;
+            border-radius: 8px;
+            display: inline-block;
+            margin-top: 20px;
+            text-align: left;
+        }
+
+        .footer {
+            text-align: center;
+            padding: 20px;
+            color: #666;
+            font-size: 0.9rem;
+            background-color: #f3f4f6;
+        }
+    </style>
+</head>
+<body>
+
+<div class="hero">
+    <div class="container">
+        <h1>天天练普通话</h1>
+        <div class="subtitle">普通话水平测试备考练习</div>
+        <p class="intro">
+            全面覆盖普通话水平测试四大题型，AI 智能语音评测。<br>
+            从字词朗读到命题说话，帮你高效备考，轻松拿高分。
+        </p>
+    </div>
+</div>
+
+<div class="container">
+
+    <!-- Highlights -->
+    <section>
+        <h2>🌟 应用亮点</h2>
+
+        <div class="highlight-item">
+            <h3>1. 四大题型全覆盖</h3>
+            <ul class="highlight-list">
+                <li><strong>单音节字词</strong>：6,595 个单音节字词，分课时逐步练习，夯实发音基础</li>
+                <li><strong>多音节词语</strong>：17,415 个多音节词语，多分类表切换，全面覆盖考试范围</li>
+                <li><strong>朗读短文</strong>：新旧两套大纲共 110 篇，标准录音对照练习</li>
+                <li><strong>命题说话</strong>：新旧大纲话题全收录，3 分钟限时训练，完整模拟考场</li>
+            </ul>
+        </div>
+
+        <div class="highlight-item">
+            <h3>2. AI 智能语音评测</h3>
+            <ul class="highlight-list">
+                <li><strong>逐字评分</strong>：每个字的准确度实时标记，红、黄、绿三色直观区分正确与偏差</li>
+                <li><strong>声调判定</strong>：精准识别声调错误，针对性纠正四声发音</li>
+                <li><strong>三维度分析</strong>：准确度、流利度、完整度三维度综合评分</li>
+                <li><strong>等级评估</strong>：自动评定普通话等级（一级甲等 ~ 三级乙等），量化备考进度</li>
+            </ul>
+        </div>
+
+        <div class="highlight-item">
+            <h3>3. 沉浸式朗读体验</h3>
+            <ul class="highlight-list">
+                <li><strong>逐字拼音注音</strong>：每个汉字上方显示拼音，随时切换显示/隐藏</li>
+                <li><strong>音频同步高亮</strong>：播放标准录音时逐句高亮，跟读更直观</li>
+                <li><strong>字典弹窗</strong>：点击任意汉字查看声母、韵母、声调拆分详情</li>
+                <li><strong>自动连续播放</strong>：播完一篇自动跳转下一篇，沉浸式学习不中断</li>
+            </ul>
+        </div>
+
+        <div class="highlight-item">
+            <h3>4. 全方位进度追踪</h3>
+            <ul class="highlight-list">
+                <li><strong>阅读进度</strong>：自动记录每篇文章的学习进度，续读一键直达</li>
+                <li><strong>练习统计</strong>：累计练习时长、测试次数、最高分数一目了然</li>
+                <li><strong>连续打卡</strong>：每日学习自动打卡，激励持续备考</li>
+                <li><strong>易错字词本</strong>：自动收集测评中的发音错误，重点攻克薄弱字词</li>
+            </ul>
+        </div>
+
+        <div class="highlight-item">
+            <h3>5. 字词深度学习</h3>
+            <ul class="highlight-list">
+                <li><strong>分课时学习</strong>：字词按课时科学编排，循序渐进</li>
+                <li><strong>标准发音播放</strong>：每个字词配有标准发音音频，随点随听</li>
+                <li><strong>拼音拆解</strong>：声母、韵母、声调逐层拆解，理解发音构成</li>
+                <li><strong>学习记忆</strong>：自动记住上次学习位置，打开即续学</li>
+            </ul>
+        </div>
+    </section>
+
+    <!-- Audience -->
+    <section>
+        <h2>🎯 适用人群</h2>
+        <div class="grid">
+            <div class="card">
+                <h4>考试备考者</h4>
+                <ul>
+                    <li>普通话水平测试（PSC）考生</li>
+                    <li>教师资格证备考需达标者</li>
+                    <li>播音主持专业学生</li>
+                </ul>
+            </div>
+            <div class="card">
+                <h4>普通话学习者</h4>
+                <ul>
+                    <li>希望提升普通话发音水平</li>
+                    <li>方言区用户矫正发音习惯</li>
+                    <li>对外汉语教学辅助工具</li>
+                </ul>
+            </div>
+            <div class="card">
+                <h4>职业需求者</h4>
+                <ul>
+                    <li>教师、播音员需持证上岗</li>
+                    <li>公务员普通话达标要求</li>
+                    <li>服务行业提升语言能力</li>
+                </ul>
+            </div>
+            <div class="card">
+                <h4>语言爱好者</h4>
+                <ul>
+                    <li>热爱朗读的文学爱好者</li>
+                    <li>希望说出标准流利普通话</li>
+                    <li>自我提升、精益求精</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- Use Cases -->
+    <section>
+        <h2>💡 使用场景</h2>
+        <div class="grid">
+            <div class="card">
+                <h4>📖 考前冲刺</h4>
+                <p>按真实考试流程模拟练习，熟悉题型和节奏，考前快速提分</p>
+            </div>
+            <div class="card">
+                <h4>🎤 日常练声</h4>
+                <p>利用碎片时间朗读练习，每天坚持 15 分钟，发音稳步提升</p>
+            </div>
+            <div class="card">
+                <h4>🎯 薄弱攻克</h4>
+                <p>针对易错字词集中强化，翘舌音、前后鼻音逐个击破</p>
+            </div>
+            <div class="card">
+                <h4>📊 成绩追踪</h4>
+                <p>每次测评留下完整记录，清晰看到自己的进步轨迹</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Product Features -->
+    <section>
+        <h2>📱 产品特色</h2>
+        <div class="feature-text">
+            <p>天天练普通话专为普通话水平测试（PSC）备考打造，覆盖考试全部四大题型——单音节字词、多音节词语、朗读短文和命题说话。新旧两套大纲 110 篇朗读短文、超过 24,000 个字词全部收录，内容完整、权威可靠。</p>
+            <p>核心亮点是 AI 智能语音评测功能：录下你的朗读，系统逐字分析发音准确度、声调正误、流利程度和完整度，给出综合评分和等级评估。你可以清楚知道哪些字发音有偏差、哪些声调需要纠正，真正做到有的放矢。</p>
+            <p>无论你是第一次参加普通话考试的学生，还是需要提升等级的在职人员，天天练普通话都能帮你科学高效地完成备考。</p>
+            <p style="text-align: center; margin-top: 20px; font-weight: bold; color: var(--primary-color);">
+                立即下载，开启你的普通话提升之旅！
+            </p>
+        </div>
+    </section>
+
+    <!-- Tags -->
+    <div class="tags">
+        <span class="tag">#普通话</span>
+        <span class="tag">#普通话水平测试</span>
+        <span class="tag">#PSC备考</span>
+        <span class="tag">#朗读练习</span>
+        <span class="tag">#拼音学习</span>
+        <span class="tag">#声调纠正</span>
+        <span class="tag">#语音评测</span>
+        <span class="tag">#命题说话</span>
+        <span class="tag">#普通话等级</span>
+    </div>
+</div>
+
+<!-- Support Section -->
+<div class="contact-section">
+    <div class="container">
+        <h2>技术支持 (Support)</h2>
+        <p>如果您在使用过程中遇到任何问题，或有功能建议，请联系我们：</p>
+        <div class="contact-info">
+            <p>📧 <strong>客服邮箱：</strong> <a href="mailto:bo.xu@163.com" style="color: #F0A060;">bo.xu@163.com</a></p>
+        </div>
+        <p style="margin-top: 20px; font-size: 0.9em; opacity: 0.8;">
+            为了更快解决您的问题，邮件中请注明可以复现问题的步骤或截图。
+        </p>
+    </div>
+</div>
+
+<div class="footer">
+    <p>&copy; 2026 FriendsLingo Team. All rights reserved.</p>
+</div>
+
+</body>
+</html>
