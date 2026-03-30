@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>舒尔特方格 - 专注力训练工具</title>
+    <meta name="description" content="经典舒尔特方格注意力训练，3×3到8×8多种难度，顺序·倒序·字母三种模式，段位晋升系统，科学提升专注力">
+    <meta name="keywords" content="舒尔特方格, 注意力训练, 专注力, Schulte Table, 注意力测试, 反应速度, 专注力训练, 大脑训练, 注意力提升">
+    <style>
+        :root {
+            --primary-color: #059669;
+            --secondary-color: #047857;
+            --text-color: #1F2937;
+            --light-bg: #ECFDF5;
+            --white: #ffffff;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+            line-height: 1.6;
+            color: var(--text-color);
+            margin: 0;
+            padding: 0;
+            background-color: var(--white);
+        }
+
+        .container { max-width: 800px; margin: 0 auto; padding: 0 20px; }
+
+        .hero {
+            background: linear-gradient(135deg, #ECFDF5 0%, #D1FAE5 100%);
+            padding: 60px 0;
+            text-align: center;
+        }
+
+        .hero h1 { color: var(--primary-color); font-size: 2.5rem; margin-bottom: 10px; }
+        .hero .subtitle { font-size: 1.25rem; color: #4B5563; margin-bottom: 30px; }
+        .hero .intro { max-width: 600px; margin: 0 auto; font-size: 1.1rem; color: #4B5563; }
+
+        section { padding: 40px 0; border-bottom: 1px solid #E5E7EB; }
+        section:last-of-type { border-bottom: none; }
+
+        h2 {
+            color: var(--text-color); font-size: 1.8rem; margin-bottom: 30px;
+            text-align: center; position: relative;
+        }
+        h2::after {
+            content: ''; display: block; width: 60px; height: 4px;
+            background-color: var(--primary-color); margin: 10px auto 0; border-radius: 2px;
+        }
+
+        h3 { color: var(--secondary-color); font-size: 1.3rem; margin-top: 25px; margin-bottom: 15px; }
+
+        .highlight-item { margin-bottom: 30px; }
+        .highlight-list { list-style: none; padding: 0; }
+        .highlight-list li { margin-bottom: 10px; padding-left: 20px; position: relative; }
+        .highlight-list li::before { content: "•"; color: var(--primary-color); font-weight: bold; position: absolute; left: 0; }
+
+        .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px; }
+
+        .card {
+            background: var(--light-bg); padding: 20px; border-radius: 12px; transition: transform 0.2s;
+        }
+        .card:hover { transform: translateY(-2px); box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05); }
+        .card h4 { margin-top: 0; color: var(--primary-color); }
+        .card ul { padding-left: 20px; margin-bottom: 0; }
+
+        .feature-text { background-color: var(--light-bg); padding: 30px; border-radius: 12px; text-align: justify; }
+
+        .tags { text-align: center; padding: 20px 0; }
+        .tag { display: inline-block; background: #E5E7EB; padding: 5px 10px; border-radius: 15px; margin: 5px; font-size: 0.9rem; color: #4B5563; }
+
+        .contact-section { background-color: #1F2937; color: white; padding: 40px 0; text-align: center; }
+        .contact-section h2 { color: white; }
+        .contact-section h2::after { background-color: #6EE7B7; }
+        .contact-info { background-color: rgba(255, 255, 255, 0.1); padding: 20px; border-radius: 8px; display: inline-block; margin-top: 20px; text-align: left; }
+
+        .footer { text-align: center; padding: 20px; color: #666; font-size: 0.9rem; background-color: #f3f4f6; }
+    </style>
+</head>
+<body>
+
+<div class="hero">
+    <div class="container">
+        <h1>舒尔特方格</h1>
+        <div class="subtitle">专注力训练工具</div>
+        <p class="intro">
+            经典舒尔特方格训练法，从 3×3 到 8×8 六种难度。<br>
+            三种训练模式，段位晋升系统，每天几分钟，科学提升专注力。
+        </p>
+    </div>
+</div>
+
+<div class="container">
+
+    <section>
+        <h2>🌟 应用亮点</h2>
+
+        <div class="highlight-item">
+            <h3>1. 六种方格难度，循序渐进</h3>
+            <ul class="highlight-list">
+                <li><strong>3×3 入门</strong>：9 个格子，适合初次接触舒尔特方格的用户</li>
+                <li><strong>4×4 进阶</strong>：16 个格子，开始挑战视觉搜索速度</li>
+                <li><strong>5×5 标准</strong>：经典的 25 格舒尔特方格，专业测试标准</li>
+                <li><strong>6×6 ~ 8×8</strong>：最高 64 格极限挑战，考验顶级专注力</li>
+            </ul>
+        </div>
+
+        <div class="highlight-item">
+            <h3>2. 三种训练模式</h3>
+            <ul class="highlight-list">
+                <li><strong>顺序模式</strong>：从 1 到 N 按顺序点击，锻炼基础视觉搜索能力</li>
+                <li><strong>倒序模式</strong>：从 N 到 1 反向点击，增加认知负荷，强化大脑灵活性</li>
+                <li><strong>字母模式</strong>：A、B、C…按字母顺序点击，全新的认知维度</li>
+            </ul>
+        </div>
+
+        <div class="highlight-item">
+            <h3>3. 段位晋升系统</h3>
+            <ul class="highlight-list">
+                <li><strong>五级段位</strong>：入门 → 进阶 → 高手 → 精英 → 传奇</li>
+                <li><strong>晋升条件</strong>：在指定格数达到目标成绩即可晋级</li>
+                <li><strong>每日目标</strong>：根据段位推荐每日训练次数，养成习惯</li>
+                <li><strong>推荐标识</strong>：当前段位推荐的格数和模式一目了然</li>
+            </ul>
+        </div>
+
+        <div class="highlight-item">
+            <h3>4. 详细训练报告</h3>
+            <ul class="highlight-list">
+                <li><strong>三维评分</strong>：速度、准确率、综合评分独立展示</li>
+                <li><strong>六档成绩</strong>：从"卓越"到"需努力"，精确评定表现水平</li>
+                <li><strong>对比分析</strong>：与上次训练和今日最佳成绩对比，看到每一次进步</li>
+                <li><strong>分享成绩</strong>：训练报告一键生成分享卡片</li>
+            </ul>
+        </div>
+
+        <div class="highlight-item">
+            <h3>5. 全面统计追踪</h3>
+            <ul class="highlight-list">
+                <li><strong>连续打卡</strong>：记录每日训练天数，保持训练节奏</li>
+                <li><strong>7 天趋势</strong>：近一周平均用时折线图，直观看到进步</li>
+                <li><strong>最佳成绩</strong>：每种格数的历史最快纪录</li>
+                <li><strong>打卡热力图</strong>：四周训练频率一览无余</li>
+            </ul>
+        </div>
+    </section>
+
+    <section>
+        <h2>🎯 适用人群</h2>
+        <div class="grid">
+            <div class="card">
+                <h4>学生</h4>
+                <ul>
+                    <li>提升课堂注意力和听讲效率</li>
+                    <li>训练视觉搜索和信息处理速度</li>
+                    <li>考试前快速集中注意力的热身工具</li>
+                </ul>
+            </div>
+            <div class="card">
+                <h4>职场人士</h4>
+                <ul>
+                    <li>缓解注意力涣散，提升工作效率</li>
+                    <li>午休几分钟训练，快速恢复专注</li>
+                    <li>长期训练改善注意力持续时间</li>
+                </ul>
+            </div>
+            <div class="card">
+                <h4>家长与孩子</h4>
+                <ul>
+                    <li>孩子注意力不集中的科学训练方案</li>
+                    <li>亲子互动，比赛谁点得更快更准</li>
+                    <li>游戏化体验，孩子主动愿意练</li>
+                </ul>
+            </div>
+            <div class="card">
+                <h4>大脑训练爱好者</h4>
+                <ul>
+                    <li>经典认知训练方法，科学验证有效</li>
+                    <li>段位系统带来持续挑战的动力</li>
+                    <li>64 格极限挑战满足高手追求</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <h2>💡 使用场景</h2>
+        <div class="grid">
+            <div class="card">
+                <h4>🧠 课前热身</h4>
+                <p>上课或工作前做一组训练，快速激活大脑进入专注状态</p>
+            </div>
+            <div class="card">
+                <h4>☕ 碎片时间</h4>
+                <p>等车、排队时随手一局，三分钟完成一次有效的注意力训练</p>
+            </div>
+            <div class="card">
+                <h4>📈 长期提升</h4>
+                <p>每天坚持训练，记录成绩变化，看到专注力的稳步提升</p>
+            </div>
+            <div class="card">
+                <h4>🏆 挑战极限</h4>
+                <p>从入门到传奇段位，8×8 方格等你来挑战</p>
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <h2>📱 产品特色</h2>
+        <div class="feature-text">
+            <p>舒尔特方格是国际公认的注意力训练工具，被广泛应用于飞行员选拔、运动员训练和儿童注意力矫正。本应用完整还原经典训练方法，提供 3×3 到 8×8 共六种格数和顺序、倒序、字母三种模式，满足不同水平用户的训练需求。</p>
+            <p>独创的五级段位晋升系统让训练不再枯燥——从入门新手到传奇大师，每一次晋级都是实力的证明。详细的训练报告从速度、准确率、综合三个维度评估表现，帮你清楚了解自己的专注力水平。</p>
+            <p>所有训练数据保存在设备本地，无需联网即可使用。简洁流畅的界面设计，让你专注于训练本身。</p>
+            <p style="text-align: center; margin-top: 20px; font-weight: bold; color: var(--primary-color);">
+                立即下载，每天三分钟，科学提升专注力！
+            </p>
+        </div>
+    </section>
+
+    <div class="tags">
+        <span class="tag">#舒尔特方格</span>
+        <span class="tag">#注意力训练</span>
+        <span class="tag">#专注力</span>
+        <span class="tag">#大脑训练</span>
+        <span class="tag">#反应速度</span>
+        <span class="tag">#段位系统</span>
+        <span class="tag">#注意力测试</span>
+        <span class="tag">#视觉搜索</span>
+        <span class="tag">#认知训练</span>
+    </div>
+</div>
+
+<div class="contact-section">
+    <div class="container">
+        <h2>技术支持 (Support)</h2>
+        <p>如果您在使用过程中遇到任何问题，或有功能建议，请联系我们：</p>
+        <div class="contact-info">
+            <p>📧 <strong>客服邮箱：</strong> <a href="mailto:bo.xu@163.com" style="color: #6EE7B7;">bo.xu@163.com</a></p>
+        </div>
+        <p style="margin-top: 20px; font-size: 0.9em; opacity: 0.8;">
+            为了更快解决您的问题，邮件中请注明可以复现问题的步骤或截图。
+        </p>
+    </div>
+</div>
+
+<div class="footer">
+    <p>&copy; 2026 FriendsLingo Team. All rights reserved.</p>
+</div>
+
+</body>
+</html>

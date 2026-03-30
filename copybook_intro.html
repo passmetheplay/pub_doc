@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>妙笔字帖 - 字帖生成与打印工具</title>
+    <meta name="description" content="一站式字帖生成工具，课本生字、古诗词、拼音、英文、数学、控笔训练，多种字体和排版，一键生成PDF打印">
+    <meta name="keywords" content="字帖, 字帖生成, 练字, 课本生字, 古诗词字帖, 拼音字帖, 英文字帖, 控笔训练, 笔顺学习, PDF打印, 小学语文">
+    <style>
+        :root {
+            --primary-color: #D97706;
+            --secondary-color: #B45309;
+            --text-color: #1F2937;
+            --light-bg: #FFFBEB;
+            --white: #ffffff;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+            line-height: 1.6;
+            color: var(--text-color);
+            margin: 0;
+            padding: 0;
+            background-color: var(--white);
+        }
+
+        .container { max-width: 800px; margin: 0 auto; padding: 0 20px; }
+
+        .hero {
+            background: linear-gradient(135deg, #FFFBEB 0%, #FEF3C7 100%);
+            padding: 60px 0;
+            text-align: center;
+        }
+
+        .hero h1 { color: var(--primary-color); font-size: 2.5rem; margin-bottom: 10px; }
+        .hero .subtitle { font-size: 1.25rem; color: #4B5563; margin-bottom: 30px; }
+        .hero .intro { max-width: 600px; margin: 0 auto; font-size: 1.1rem; color: #4B5563; }
+
+        section { padding: 40px 0; border-bottom: 1px solid #E5E7EB; }
+        section:last-of-type { border-bottom: none; }
+
+        h2 {
+            color: var(--text-color); font-size: 1.8rem; margin-bottom: 30px;
+            text-align: center; position: relative;
+        }
+        h2::after {
+            content: ''; display: block; width: 60px; height: 4px;
+            background-color: var(--primary-color); margin: 10px auto 0; border-radius: 2px;
+        }
+
+        h3 { color: var(--secondary-color); font-size: 1.3rem; margin-top: 25px; margin-bottom: 15px; }
+
+        .highlight-item { margin-bottom: 30px; }
+        .highlight-list { list-style: none; padding: 0; }
+        .highlight-list li { margin-bottom: 10px; padding-left: 20px; position: relative; }
+        .highlight-list li::before { content: "•"; color: var(--primary-color); font-weight: bold; position: absolute; left: 0; }
+
+        .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px; }
+
+        .card {
+            background: var(--light-bg); padding: 20px; border-radius: 12px; transition: transform 0.2s;
+        }
+        .card:hover { transform: translateY(-2px); box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05); }
+        .card h4 { margin-top: 0; color: var(--primary-color); }
+        .card ul { padding-left: 20px; margin-bottom: 0; }
+
+        .feature-text { background-color: var(--light-bg); padding: 30px; border-radius: 12px; text-align: justify; }
+
+        .tags { text-align: center; padding: 20px 0; }
+        .tag { display: inline-block; background: #E5E7EB; padding: 5px 10px; border-radius: 15px; margin: 5px; font-size: 0.9rem; color: #4B5563; }
+
+        .contact-section { background-color: #1F2937; color: white; padding: 40px 0; text-align: center; }
+        .contact-section h2 { color: white; }
+        .contact-section h2::after { background-color: #FBBF24; }
+        .contact-info { background-color: rgba(255, 255, 255, 0.1); padding: 20px; border-radius: 8px; display: inline-block; margin-top: 20px; text-align: left; }
+
+        .footer { text-align: center; padding: 20px; color: #666; font-size: 0.9rem; background-color: #f3f4f6; }
+    </style>
+</head>
+<body>
+
+<div class="hero">
+    <div class="container">
+        <h1>妙笔字帖</h1>
+        <div class="subtitle">字帖生成与打印工具</div>
+        <p class="intro">
+            七种字帖类型一站搞定：课本生字、古诗词、拼音、英文、数学、控笔、自由练字。<br>
+            多种字体和排版，实时预览，一键导出 PDF 打印。
+        </p>
+    </div>
+</div>
+
+<div class="container">
+
+    <section>
+        <h2>🌟 应用亮点</h2>
+
+        <div class="highlight-item">
+            <h3>1. 七种字帖类型，全面覆盖</h3>
+            <ul class="highlight-list">
+                <li><strong>课本生字</strong>：同步小学 1-6 年级语文课本，按年级/学期/单元/课自由选字</li>
+                <li><strong>古诗词</strong>：唐诗三百首、宋词精选、诗经、蒙学经典，海量古诗词一键生成字帖</li>
+                <li><strong>拼音</strong>：声母、韵母、整体认读音节，配四线三格专业拼音格</li>
+                <li><strong>英文</strong>：大小写字母、常用单词分组，英文四线格标准排版</li>
+                <li><strong>数字与数学</strong>：0-9/0-20 数字练习，加减乘除算式自动生成</li>
+                <li><strong>控笔训练</strong>：多种图案模板，提升握笔控制能力</li>
+                <li><strong>自由练字</strong>：任意输入文字或拍照 OCR 识别，想练什么练什么</li>
+            </ul>
+        </div>
+
+        <div class="highlight-item">
+            <h3>2. 专业字体与排版</h3>
+            <ul class="highlight-list">
+                <li><strong>四种字体</strong>：楷书（霞鹜文楷）、宋体（思源宋体）、黑体（思源黑体）、手写体（悠哉）</li>
+                <li><strong>六种格线</strong>：米字格、田字格、十字格、九宫格、空白格、空白行</li>
+                <li><strong>四种字号</strong>：小、中、大、特大，适配不同年龄段</li>
+                <li><strong>三种纸型</strong>：A4、A5、B5，满足不同打印需求</li>
+            </ul>
+        </div>
+
+        <div class="highlight-item">
+            <h3>3. 灵活的描红与排版</h3>
+            <ul class="highlight-list">
+                <li><strong>描红模式</strong>：渐变描红、首字描红、全部描红、全部空格四种选择</li>
+                <li><strong>排版预设</strong>：全铺满、一描一练、一描两练、由扶到放、自定义行数</li>
+                <li><strong>描红颜色</strong>：预设色板 + 自定义颜色选取，还可调节浓度</li>
+                <li><strong>表头设置</strong>：可选姓名栏、日期、评分区域</li>
+            </ul>
+        </div>
+
+        <div class="highlight-item">
+            <h3>4. 导出打印，一键搞定</h3>
+            <ul class="highlight-list">
+                <li><strong>PNG 图片</strong>：标准/高清/超清三种导出质量</li>
+                <li><strong>PDF 文档</strong>：专业排版，直接发送到打印机</li>
+                <li><strong>系统打印</strong>：连接打印机一键打印，在家就能用</li>
+                <li><strong>历史记录</strong>：自动保存已生成的字帖，随时重新导出</li>
+            </ul>
+        </div>
+
+        <div class="highlight-item">
+            <h3>5. 笔顺学习，辅助认字</h3>
+            <ul class="highlight-list">
+                <li><strong>笔画动画</strong>：大字动态演示每一笔的书写顺序</li>
+                <li><strong>分步展示</strong>：左右滑动逐笔查看，笔画拆解清晰</li>
+                <li><strong>临摹练习</strong>：在屏幕上跟着笔顺描写，边学边练</li>
+                <li><strong>内容同步</strong>：课本生词和古诗词素材均可查看笔顺</li>
+            </ul>
+        </div>
+    </section>
+
+    <section>
+        <h2>🎯 适用人群</h2>
+        <div class="grid">
+            <div class="card">
+                <h4>小学生家长</h4>
+                <ul>
+                    <li>课本同步生字字帖，课后巩固每一课</li>
+                    <li>不用手写字帖，App 生成打印即可</li>
+                    <li>描红从深到浅，循序渐进练好字</li>
+                </ul>
+            </div>
+            <div class="card">
+                <h4>幼儿启蒙</h4>
+                <ul>
+                    <li>控笔训练打好握笔基础</li>
+                    <li>拼音字帖配合幼小衔接</li>
+                    <li>大字号特大格，适合小手练习</li>
+                </ul>
+            </div>
+            <div class="card">
+                <h4>教师</h4>
+                <ul>
+                    <li>快速批量生成班级练字作业</li>
+                    <li>按单元课文精准选字</li>
+                    <li>PDF 直接打印分发</li>
+                </ul>
+            </div>
+            <div class="card">
+                <h4>书法练习者</h4>
+                <ul>
+                    <li>古诗词字帖，边练字边品诗</li>
+                    <li>米字格/九宫格辅助间架结构</li>
+                    <li>自由练字输入任意内容</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <h2>💡 使用场景</h2>
+        <div class="grid">
+            <div class="card">
+                <h4>📝 课后作业</h4>
+                <p>今天学了哪一课，打开课本生字，勾选生字，30 秒生成字帖打印</p>
+            </div>
+            <div class="card">
+                <h4>🏠 家庭练字</h4>
+                <p>晚饭后 15 分钟，一张字帖，培养孩子每日练字的好习惯</p>
+            </div>
+            <div class="card">
+                <h4>✍️ 笔顺学习</h4>
+                <p>遇到不会写的字，看笔顺动画跟着学，再打印字帖反复练</p>
+            </div>
+            <div class="card">
+                <h4>🖨️ 批量打印</h4>
+                <p>教师备课时批量生成多课字帖，一次打印全班够用</p>
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <h2>📱 产品特色</h2>
+        <div class="feature-text">
+            <p>妙笔字帖是一款专为练字需求打造的字帖生成工具。无论是课本生字、古诗词、拼音、英文、数学还是自由练字，只需几步操作即可生成专业排版的字帖，导出 PDF 或图片直接打印。</p>
+            <p>应用内置楷书、宋体、黑体、手写体四种字体和米字格、田字格等六种格线，搭配渐变描红和多种排版预设，满足从幼儿启蒙到书法练习的全阶段需求。课本生字同步小学全年级语文教材，古诗词收录唐诗三百首、宋词精选等经典篇目，内容丰富。</p>
+            <p>笔顺学习功能提供汉字笔画动画演示和屏幕临摹，帮助孩子掌握正确的书写顺序。所有功能离线可用，不需要联网，生成的字帖数据保存在设备本地。</p>
+            <p style="text-align: center; margin-top: 20px; font-weight: bold; color: var(--primary-color);">
+                立即下载，告别手写字帖，练字从此更轻松！
+            </p>
+        </div>
+    </section>
+
+    <div class="tags">
+        <span class="tag">#字帖</span>
+        <span class="tag">#练字</span>
+        <span class="tag">#课本生字</span>
+        <span class="tag">#古诗词字帖</span>
+        <span class="tag">#拼音练习</span>
+        <span class="tag">#英文字帖</span>
+        <span class="tag">#控笔训练</span>
+        <span class="tag">#笔顺学习</span>
+        <span class="tag">#PDF打印</span>
+    </div>
+</div>
+
+<div class="contact-section">
+    <div class="container">
+        <h2>技术支持 (Support)</h2>
+        <p>如果您在使用过程中遇到任何问题，或有功能建议，请联系我们：</p>
+        <div class="contact-info">
+            <p>📧 <strong>客服邮箱：</strong> <a href="mailto:bo.xu@163.com" style="color: #FBBF24;">bo.xu@163.com</a></p>
+        </div>
+        <p style="margin-top: 20px; font-size: 0.9em; opacity: 0.8;">
+            为了更快解决您的问题，邮件中请注明可以复现问题的步骤或截图。
+        </p>
+    </div>
+</div>
+
+<div class="footer">
+    <p>&copy; 2026 FriendsLingo Team. All rights reserved.</p>
+</div>
+
+</body>
+</html>
