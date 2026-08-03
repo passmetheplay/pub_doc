@@ -1,0 +1,99 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>五笔打字练习 - 86/98版查码拆字与练习</title>
+  <meta name="description" content="支持五笔86版与98版查码、拆字、词组反查、专项练习、错字复习和本地进度记录。">
+  <meta name="keywords" content="五笔打字练习,五笔反查,五笔拆字,五笔86版,五笔98版,字根练习,词组练习">
+  <style>
+    :root{--primary:#2563eb;--secondary:#1d4ed8;--accent:#f59e0b;--text:#1f2937;--muted:#4b5563;--light:#eff6ff;--white:#fff}
+    *{box-sizing:border-box}
+    body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;line-height:1.65;color:var(--text);margin:0;background:var(--white)}
+    a{color:var(--primary)}
+    .container{max-width:840px;margin:0 auto;padding:0 22px}
+    .hero{background:linear-gradient(145deg,#eff6ff 0%,#dbeafe 58%,#fff7ed 100%);padding:72px 0 66px;text-align:center}
+    .hero h1{color:#153a78;font-size:clamp(2.25rem,7vw,3.5rem);line-height:1.15;margin:0 0 14px}
+    .hero .subtitle{font-size:1.25rem;font-weight:650;color:var(--secondary);margin-bottom:22px}
+    .hero .intro{max-width:650px;margin:0 auto;color:var(--muted);font-size:1.08rem}
+    .badge{display:inline-block;background:rgba(37,99,235,.1);color:var(--secondary);font-weight:650;border-radius:999px;padding:7px 13px;margin-bottom:20px}
+    section{padding:44px 0;border-bottom:1px solid #e5e7eb}
+    h2{text-align:center;font-size:1.8rem;margin:0 0 30px}
+    h2:after{content:"";display:block;width:58px;height:4px;background:var(--primary);border-radius:2px;margin:10px auto 0}
+    h3{color:var(--secondary);font-size:1.25rem;margin:0 0 10px}
+    .highlights{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:18px}
+    .card{background:var(--light);padding:22px;border-radius:16px}
+    .card p{margin:0;color:var(--muted)}
+    .steps{counter-reset:step;display:grid;gap:14px}
+    .step{position:relative;padding:18px 20px 18px 62px;background:#f9fafb;border-radius:14px}
+    .step:before{counter-increment:step;content:counter(step);position:absolute;left:18px;top:16px;width:30px;height:30px;border-radius:50%;display:grid;place-items:center;background:var(--primary);color:#fff;font-weight:700}
+    .pro{background:linear-gradient(135deg,#eff6ff,#f8fafc);border:1px solid #bfdbfe;border-radius:18px;padding:28px}
+    .pro strong{color:var(--secondary)}
+    .tags{text-align:center;padding-top:25px}
+    .tag{display:inline-block;background:#e5e7eb;color:#4b5563;border-radius:999px;padding:5px 11px;margin:4px;font-size:.9rem}
+    .contact{background:#17366c;color:#fff;text-align:center;padding:46px 0}
+    .contact h2{color:#fff}.contact h2:after{background:#fbbf24}
+    .contact a{color:#bfdbfe}
+    .contact-links{display:flex;justify-content:center;gap:18px;flex-wrap:wrap}
+    footer{text-align:center;color:#6b7280;background:#f3f4f6;padding:22px;font-size:.9rem}
+    @media(max-width:520px){.hero{padding:54px 0}.hero h1{font-size:2.35rem}section{padding:36px 0}}
+  </style>
+</head>
+<body>
+  <header class="hero">
+    <div class="container">
+      <div class="badge">查码永久免费 · 练习先体验</div>
+      <h1>五笔打字练习</h1>
+      <div class="subtitle">86/98版查码拆字与练习</div>
+      <p class="intro">从查清一个字的编码和拆法，到用字根、单字、词组与错字复习真正练会。无需注册，核心资料和练习记录保存在设备本地。</p>
+    </div>
+  </header>
+
+  <main class="container">
+    <section>
+      <h2>应用亮点</h2>
+      <div class="highlights">
+        <article class="card"><h3>86/98 版反查</h3><p>输入汉字或拼音查看编码、简码级别、键位和拆字步骤，并可切换方案核对。</p></article>
+        <article class="card"><h3>98 版码元可视</h3><p>为 3,500 个常用字提供经过校验的详细拆分，以 286 个可视码元帮助理解取码。</p></article>
+        <article class="card"><h3>词组逐字讲清</h3><p>支持 2 至 8 字词组编码计算，同时展开每个字的编码与拆分。</p></article>
+        <article class="card"><h3>多种专项练习</h3><p>覆盖字根、单字、词组、三分钟练习和错字复习，支持屏幕键盘与实体键盘。</p></article>
+        <article class="card"><h3>复习与进度</h3><p>本地记录速度、准确率、连续练习天数、掌握度和错字队列。</p></article>
+        <article class="card"><h3>安静的本地工具</h3><p>无账号、无广告、无第三方追踪；核心查码和练习无需联网。</p></article>
+      </div>
+    </section>
+
+    <section>
+      <h2>从查码到会打</h2>
+      <div class="steps">
+        <div class="step"><strong>查编码与拆字</strong><br>从汉字或拼音快速找到 86/98 版结果。</div>
+        <div class="step"><strong>加入今日练习</strong><br>把刚查过或容易出错的字带入专项练习。</div>
+        <div class="step"><strong>完成后复盘</strong><br>查看速度、准确率与错字，并继续针对性复习。</div>
+      </div>
+    </section>
+
+    <section>
+      <h2>免费体验与永久版</h2>
+      <div class="pro">
+        <p><strong>始终免费：</strong>查码、86/98 编码、拆字与字根解释。</p>
+        <p><strong>免费体验：</strong>每位用户可以完成 3 次完整练习。</p>
+        <p><strong>永久版：</strong>一次购买解锁不限次数练习，不是订阅，不会自动续费；同一 Apple ID 可恢复购买。实际价格以 App 内 Apple 提供的本地化价格为准。</p>
+      </div>
+      <div class="tags"><span class="tag">五笔86版</span><span class="tag">五笔98版</span><span class="tag">五笔反查</span><span class="tag">拆字练习</span><span class="tag">实体键盘</span></div>
+    </section>
+  </main>
+
+  <section class="contact">
+    <div class="container">
+      <h2>帮助与支持</h2>
+      <p>遇到编码、拆字、练习或购买恢复问题，请联系我们。</p>
+      <div class="contact-links">
+        <a href="mailto:bringmemyfun@gmail.com?subject=五笔打字练习反馈">发送邮件</a>
+        <a href="wubitype_support.html">常见问题</a>
+        <a href="wubitype_privacy.html">隐私政策</a>
+      </div>
+    </div>
+  </section>
+
+  <footer>© 2026 五笔打字练习 · 本 App 与任何输入法厂商均无隶属或官方背书关系</footer>
+</body>
+</html>
