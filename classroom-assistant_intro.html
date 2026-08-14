@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>班主任助手 - 班级管理与成绩统计</title>
+    <meta name="description" content="面向中小学班主任的轻量工作台：快速记录班务、跟进学生事项、管理学生档案并完成成绩导入统计。">
+    <meta name="keywords" content="班主任,班级管理,成绩统计,学生档案,班务记录,请假跟进,教师工具">
+    <style>
+        :root {
+            --primary: #4F6593;
+            --secondary: #334A73;
+            --accent: #F28A2E;
+            --text: #1F2937;
+            --muted: #5F6B7A;
+            --surface: #F2F5FA;
+            --line: #E2E7EF;
+            --white: #FFFFFF;
+        }
+        * { box-sizing: border-box; }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", "Microsoft YaHei", sans-serif;
+            line-height: 1.7;
+            color: var(--text);
+            margin: 0;
+            background: var(--white);
+        }
+        .container { max-width: 860px; margin: 0 auto; padding: 0 22px; }
+        .hero {
+            padding: 72px 0 62px;
+            text-align: center;
+            background: linear-gradient(145deg, #EEF4FF 0%, #F6F7FA 55%, #FFF3E9 100%);
+        }
+        .mark {
+            width: 64px;
+            height: 8px;
+            margin: 0 auto 24px;
+            border-radius: 999px;
+            background: linear-gradient(90deg, var(--primary) 0 72%, var(--accent) 72%);
+        }
+        .hero h1 { margin: 0 0 12px; color: var(--primary); font-size: clamp(2.25rem, 7vw, 3.25rem); line-height: 1.2; }
+        .hero .subtitle { margin: 0 0 24px; color: var(--secondary); font-size: 1.25rem; font-weight: 600; }
+        .hero .intro { max-width: 660px; margin: 0 auto; color: var(--muted); font-size: 1.08rem; }
+        section { padding: 48px 0; border-bottom: 1px solid var(--line); }
+        h2 { margin: 0 0 30px; text-align: center; font-size: 1.75rem; }
+        h2::after { content: ""; display: block; width: 52px; height: 4px; margin: 12px auto 0; border-radius: 999px; background: var(--primary); }
+        h3 { margin: 0 0 10px; color: var(--secondary); }
+        .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(245px, 1fr)); gap: 18px; }
+        .card { padding: 22px; border-radius: 16px; background: var(--surface); }
+        .card p { margin: 0; color: var(--muted); }
+        .feature { display: grid; grid-template-columns: 40px 1fr; gap: 14px; align-items: start; margin-bottom: 26px; }
+        .number { display: grid; place-items: center; width: 38px; height: 38px; border-radius: 12px; color: var(--primary); background: var(--surface); font-weight: 750; }
+        .feature p { margin: 0; color: var(--muted); }
+        .privacy-note { padding: 26px; border-radius: 18px; background: #EDF2FA; }
+        .privacy-note strong { color: var(--primary); }
+        .tags { padding-top: 28px; text-align: center; }
+        .tag { display: inline-block; margin: 5px; padding: 6px 12px; border-radius: 999px; color: var(--secondary); background: #E9EDF4; font-size: 0.9rem; }
+        .support { padding: 48px 0; color: white; text-align: center; background: var(--secondary); }
+        .support h2 { color: white; }
+        .support h2::after { background: var(--accent); }
+        .support a { color: white; font-weight: 650; }
+        .support-links { display: flex; flex-wrap: wrap; justify-content: center; gap: 12px 22px; }
+        footer { padding: 24px 20px; text-align: center; color: var(--muted); background: #F4F5F7; font-size: 0.9rem; }
+        @media (max-width: 520px) {
+            .hero { padding: 56px 0 48px; }
+            section { padding: 38px 0; }
+        }
+    </style>
+</head>
+<body>
+
+<header class="hero">
+    <div class="container">
+        <div class="mark" aria-hidden="true"></div>
+        <h1>班主任助手</h1>
+        <p class="subtitle">班务随手记，跟进不遗漏，成绩一眼看懂</p>
+        <p class="intro">面向中小学班主任的轻量 iPhone 工作台，把散落在纸张、微信、备忘录和 Excel 里的班务记录、学生跟进与成绩统计整理到一个清晰流程中。</p>
+    </div>
+</header>
+
+<main class="container">
+    <section>
+        <h2>核心能力</h2>
+
+        <div class="feature">
+            <div class="number">1</div>
+            <div><h3>快速记录班务</h3><p>记录请假、表扬、违纪、家校沟通和待办；可关联一名或多名学生，批量保存后仍能分别维护。</p></div>
+        </div>
+        <div class="feature">
+            <div class="number">2</div>
+            <div><h3>到期跟进与本地提醒</h3><p>需要继续处理的事情可以设置跟进时间，今日页集中展示到期、逾期和未完成事项。</p></div>
+        </div>
+        <div class="feature">
+            <div class="number">3</div>
+            <div><h3>学生成长时间线</h3><p>学生资料、日常记录和跟进信息汇总到个人时间线，查找情况时不再翻找多个聊天或纸质记录。</p></div>
+        </div>
+        <div class="feature">
+            <div class="number">4</div>
+            <div><h3>成绩导入与客观统计</h3><p>支持 CSV、TSV 文件以及从 Excel/WPS 复制粘贴；导入前检查未知学生、重复行、非法数字和超出满分等问题。</p></div>
+        </div>
+        <div class="feature">
+            <div class="number">5</div>
+            <div><h3>语音、附件与 PDF</h3><p>课间不方便打字时可使用语音转文字，并为记录补充图片或 PDF；需要整理材料时可生成学生报告。</p></div>
+        </div>
+        <div class="feature">
+            <div class="number">6</div>
+            <div><h3>导出、备份与私人同步</h3><p>支持 CSV 导出和完整备份；iCloud 私人同步默认关闭，可由教师主动开启，用于自己的设备之间同步。</p></div>
+        </div>
+    </section>
+
+    <section>
+        <h2>适合谁使用</h2>
+        <div class="grid">
+            <div class="card"><h3>一线班主任</h3><p>日常同时承担学生记录、请假跟进、家校沟通和成绩分析，希望减少遗漏与重复整理。</p></div>
+            <div class="card"><h3>多班级任课教师</h3><p>需要维护多个班级的学生资料和考试成绩，同时希望工具足够轻量、无需部署学校系统。</p></div>
+            <div class="card"><h3>重视数据边界的教师</h3><p>不希望把完整名单和成绩上传到陌生开发者服务器，需要本机优先和可选私人 iCloud。</p></div>
+        </div>
+    </section>
+
+    <section>
+        <h2>常见使用方式</h2>
+        <div class="grid">
+            <div class="card"><h3>课间</h3><p>选记录类型和学生，输入或口述一句话，需要时加上跟进时间。</p></div>
+            <div class="card"><h3>放学前</h3><p>查看今日页的到期事项、请假和未完成待办，逐项完成或继续跟进。</p></div>
+            <div class="card"><h3>考试后</h3><p>导入脱敏后的成绩表，处理匹配问题，再查看均分、及格率、排名和客观变化。</p></div>
+            <div class="card"><h3>沟通或归档时</h3><p>打开学生时间线核对记录，按需要导出 PDF、CSV 或完整备份。</p></div>
+        </div>
+    </section>
+
+    <section>
+        <h2>隐私设计</h2>
+        <div class="privacy-note">
+            <strong>默认本机保存，无开发者账号服务器。</strong>
+            班级、学生、记录和成绩默认保存在教师自己的设备。iCloud 同步需主动开启，数据进入当前 Apple ID 的私人 CloudKit 数据库，开发者无法读取私人数据库内容。应用不包含第三方广告或跨应用追踪 SDK。
+        </div>
+        <div class="tags">
+            <span class="tag">本地优先</span>
+            <span class="tag">无需注册</span>
+            <span class="tag">私人 iCloud</span>
+            <span class="tag">无广告追踪</span>
+            <span class="tag">一次购买</span>
+        </div>
+    </section>
+
+    <section>
+        <h2>购买说明</h2>
+        <p>应用提供基础免费能力和可选的 Pro 买断。Pro 的实际价格、可用地区和家庭共享状态以 App Store 页面显示为准；购买与恢复购买由 Apple StoreKit 处理。</p>
+    </section>
+</main>
+
+<section class="support">
+    <div class="container">
+        <h2>支持与联系</h2>
+        <p>遇到问题或希望提出建议，可通过以下方式联系我们。</p>
+        <div class="support-links">
+            <a href="mailto:bo.xu@163.com">bo.xu@163.com</a>
+            <a href="classroom-assistant_privacy.html">查看隐私政策</a>
+        </div>
+    </div>
+</section>
+
+<footer>班主任助手 · 面向教师的本地优先班级工作台</footer>
+
+</body>
+</html>
