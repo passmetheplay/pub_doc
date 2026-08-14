@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>公式快写隐私政策</title>
+  <meta name="description" content="公式快写 iOS 应用隐私政策：公式和图片仅在设备本地处理，不收集个人数据，不包含广告或跟踪。">
+  <style>
+    :root { color-scheme: light dark; --brand:#315a78; --accent:#b97852; --muted:#667085; --card:#f3f6f8; }
+    * { box-sizing:border-box; }
+    body { margin:0; font:16px/1.75 -apple-system,BlinkMacSystemFont,"PingFang SC","Segoe UI",sans-serif; color:#18212b; background:#fff; }
+    main { width:min(820px,calc(100% - 40px)); margin:0 auto; padding:48px 0 64px; }
+    h1 { font-size:clamp(2rem,7vw,3rem); line-height:1.15; color:var(--brand); margin:0 0 8px; }
+    h2 { margin:38px 0 10px; font-size:1.3rem; color:var(--brand); }
+    h3 { margin:22px 0 6px; font-size:1.05rem; }
+    p,li { max-width:72ch; }
+    .lead,.notice { background:var(--card); border-left:4px solid var(--accent); border-radius:12px; padding:18px 20px; }
+    .meta { color:var(--muted); margin-bottom:28px; }
+    a { color:var(--brand); font-weight:600; }
+    footer { margin-top:48px; padding-top:24px; border-top:1px solid #d9e0e6; color:var(--muted); }
+    @media (prefers-color-scheme:dark) { body{background:#11161c;color:#edf2f7}.lead,.notice{background:#1d2630}.meta,footer{color:#a8b3bf}h1,h2,a{color:#8eb6cf} }
+  </style>
+</head>
+<body>
+<main>
+  <h1>公式快写隐私政策</h1>
+  <p class="meta">生效及更新日期：2026 年 8 月 12 日</p>
+  <p class="lead"><strong>核心承诺：</strong>公式快写不要求注册登录，不包含广告、分析或用户跟踪。图片识别、公式编辑与导出均在您的 iPhone 或 iPad 本地完成，我们不会把图片、公式或使用记录上传到服务器。</p>
+
+  <h2>1. 我们处理哪些数据</h2>
+  <h3>您主动创建的内容</h3>
+  <ul>
+    <li>输入或识别得到的 LaTeX 公式、标题、收藏状态和最近删除记录；</li>
+    <li>尚未保存的编辑草稿；</li>
+    <li>默认导出场景、图片倍率、背景方式和首次引导状态等偏好。</li>
+  </ul>
+  <p>这些内容只保存在设备本地，用于提供草稿恢复、公式库、收藏、最近删除和导出偏好。</p>
+
+  <h3>您选择的图片</h3>
+  <p>当您从相册选择或使用相机拍摄公式时，图片只用于本地裁剪和公式识别。识别由应用内置的 Core ML 模型或 Apple Vision 在设备上完成，图片不会上传。</p>
+
+  <h2>2. 权限用途</h2>
+  <ul>
+    <li><strong>相机：</strong>仅在您主动选择“拍照识别”时，用于拍摄含有公式的图片。</li>
+    <li><strong>照片读取：</strong>仅在您主动选择“从相册导入”时，用于读取所选图片。</li>
+    <li><strong>照片添加：</strong>仅在您主动选择“保存图片”时，用于把生成的公式图片写入照片。</li>
+  </ul>
+  <p>拒绝这些权限不会影响手动输入、公式预览、公式库和复制 LaTeX 等无需权限的功能。您可以随时在 iOS“设置”中修改授权。</p>
+
+  <h2>3. 数据收集、共享与跟踪</h2>
+  <ul>
+    <li>我们不收集可识别您身份的信息、设备标识符或精确位置；</li>
+    <li>我们不把任何用户内容出售、出租或共享给第三方；</li>
+    <li>应用不包含广告 SDK、分析 SDK、崩溃上报 SDK或跨应用跟踪；</li>
+    <li>应用不创建账号，也不使用云端同步服务。</li>
+  </ul>
+
+  <h2>4. 本地技术组件</h2>
+  <p>公式排版使用应用内置的 KaTeX 资源，数学识别使用应用内置的 UniMERNet Tiny Core ML 模型，并在旧系统上使用 Apple Vision 兼容路径。这些组件均在应用进程或系统框架内本地运行，不会把用户内容发送到外部服务。</p>
+
+  <h2>5. 访问公开页面</h2>
+  <p>当您主动打开应用内的“完整隐私政策”或“产品介绍”时，应用会从 GitHub Pages 加载相应公开网页。与访问普通网站一样，托管服务可能为安全和运维目的处理必要的网络日志，例如 IP 地址、浏览器类型和访问时间；我们不会把您的公式、图片、收藏或使用记录附加到这些请求中。您也可以选择在系统浏览器中打开页面。相关托管服务的数据处理适用其自身隐私条款。</p>
+
+  <h2>6. 数据保留与删除</h2>
+  <p>您可以在应用的“我的 → 数据管理”中清空公式历史、最近删除内容或重置设置。卸载应用后，iOS 会删除该应用容器内的数据。已由您主动保存到“照片”或分享给其他应用的文件，需要由您在相应位置另行删除。</p>
+
+  <h2>7. 儿童隐私</h2>
+  <p>公式快写不会主动收集任何年龄段用户的个人信息。应用面向学习、教学和内容制作场景；儿童应在家长或监护人的指导下管理设备权限。</p>
+
+  <h2>8. 政策变更</h2>
+  <p>如果应用的数据处理方式发生实质变化，我们会更新本页面和应用内说明，并修改页面顶部日期。涉及新增数据收集时，我们会在适用情况下重新取得您的许可。</p>
+
+  <h2>9. 联系我们</h2>
+  <p>如果您对本政策或数据处理有疑问，请发送邮件至 <a href="mailto:bo.xu@163.com">bo.xu@163.com</a>。邮件中请注明“公式快写隐私问题”。</p>
+
+  <footer>本政策适用于 Bundle ID 为 com.weile.tools.formulaflow 的公式快写 iOS / iPadOS 应用。</footer>
+</main>
+</body>
+</html>
