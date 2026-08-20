@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>隐私政策 - 打字练习</title>
+    <title>隐私政策 - 小妙打字通</title>
     <style>
         body {
             font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
@@ -56,18 +56,18 @@
 <body>
 <div class="container">
 
-    <h1>打字练习 - 隐私政策</h1>
+    <h1>小妙打字通 - 隐私政策</h1>
 
     <h2>引言</h2>
-    <p>感谢您使用《打字练习》。我们非常重视您的隐私，并致力于保护您的个人信息。本隐私政策旨在向您说明我们如何收集、使用和保护您的信息。</p>
+    <p>感谢您使用《小妙打字通》。我们非常重视您的隐私，并致力于保护您的个人信息。本隐私政策说明 App 在提供打字练习、购买、配置实验、使用分析和稳定性监控时如何处理数据。</p>
 
     <h2>信息收集与使用</h2>
 
     <p><strong>1. 必要信息</strong></p>
     <ul>
         <li><strong>App Store 账号信息：</strong>通过 Apple StoreKit 处理应用内购买（会员）和恢复购买，我们不会直接获取您的支付账户信息。</li>
-        <li><strong>设备信息：</strong>用于优化应用性能和适配不同屏幕尺寸。</li>
-        <li><strong>设备标识符：</strong>用于确保应用功能的正常运行（如会员状态验证）。</li>
+        <li><strong>设备与应用信息：</strong>可能包括设备型号、操作系统与 App 版本、语言、时区、国家或地区等，用于功能适配、远程配置、分析和故障诊断。</li>
+        <li><strong>安装标识符：</strong>Google Analytics for Firebase 会为每次 App 安装生成随机的 App 实例标识符，用于区分安装实例、统计用户与会话。App 不要求注册账号，也不会将该标识符与姓名、邮箱等直接身份信息关联。</li>
     </ul>
 
     <p><strong>2. 用户生成数据</strong></p>
@@ -78,10 +78,20 @@
         <li><strong>偏好设置：</strong>如拼音显示、释义显示、震动反馈、外观主题等设置。</li>
     </ul>
 
-    <p><strong>3. 网络访问</strong></p>
+    <p><strong>3. 分析与诊断数据</strong></p>
+    <ul>
+        <li><strong>使用情况：</strong>我们使用 Firebase Analytics 记录 App 启动、页面与按钮交互、练习开始/完成/中途退出、练习类别与模式、速度与准确率、购买页到达及实验分组等事件，用于评估功能效果和改进体验。</li>
+        <li><strong>内容保护：</strong>不会向 Firebase 上传用户输入的练习正文。分析事件可能包含内容长度、类别、统计结果以及用于区分练习内容的摘要标识。</li>
+        <li><strong>购买事件：</strong>Google Analytics 可能记录由 App Store 处理的产品 ID、产品名称、价格、币种和订阅状态等事件；我们不会获得银行卡或 Apple 账号支付凭据。</li>
+        <li><strong>崩溃与诊断：</strong>Firebase Crashlytics 可能收集崩溃日志、堆栈、崩溃时的应用状态、设备与操作系统信息，以及崩溃前的交互面包屑，用于定位问题和提升稳定性。</li>
+        <li><strong>粗略位置：</strong>Firebase/Google Analytics 可能依据网络信息推导国家、地区或城市级别的粗略位置，用于汇总分析和远程配置；App 不请求或收集 GPS 精确位置。</li>
+    </ul>
+
+    <p><strong>4. 网络访问</strong></p>
     <ul>
         <li><strong>会员服务：</strong>应用需要访问网络以验证会员购买状态和处理内购交易。</li>
-        <li><strong>练习内容：</strong>所有练习素材（拼音、词组、文章等）均内置于应用中，无需联网即可使用。</li>
+        <li><strong>配置与实验：</strong>Firebase Remote Config 和 A/B Testing 用于下发功能参数及实验分组。Firebase 可能处理国家代码、语言、时区、系统版本、Firebase App ID、Bundle ID、首次打开时间和实验用户属性。</li>
+        <li><strong>练习内容：</strong>内置练习素材（拼音、词组、文章等）无需联网即可使用；远程配置、分析、购买和故障诊断需要网络。</li>
     </ul>
 
     <h2>数据存储与安全</h2>
@@ -94,8 +104,8 @@
 
     <p><strong>2. 云端交互</strong></p>
     <ul>
-        <li>应用仅在处理会员购买和验证时与 Apple 服务器进行交互。</li>
-        <li>这些交互不包含您的个人练习数据或身份信息。</li>
+        <li>应用会与 Apple 的 StoreKit 服务，以及 Google Firebase 的 Analytics、Remote Config、A/B Testing 和 Crashlytics 服务交互。</li>
+        <li>核心练习记录、错题本和偏好设置保存在设备本地；上述第三方服务仅处理本政策列出的购买、配置、分析与诊断数据。</li>
     </ul>
 
     <p><strong>3. 数据安全</strong></p>
@@ -109,7 +119,15 @@
 
     <p><strong>1. Apple 服务</strong></p>
     <ul>
-        <li><strong>App Store & StoreKit：</strong>用于处理应用内购买（会员）及交易安全。</li>
+        <li><strong>App Store &amp; StoreKit：</strong>用于处理应用内购买（会员）及交易安全。</li>
+    </ul>
+
+    <p><strong>2. Google Firebase</strong></p>
+    <ul>
+        <li><strong>Google Analytics for Firebase：</strong>用于统计使用情况、功能转化和实验指标。</li>
+        <li><strong>Firebase Remote Config 与 A/B Testing：</strong>用于安全下发配置、分配实验变体并评估功能效果。</li>
+        <li><strong>Firebase Crashlytics：</strong>用于收集崩溃和诊断信息，定位稳定性问题。</li>
+        <li>Firebase 数据处理受 Google/Firebase 的服务条款和隐私政策约束。</li>
     </ul>
 
     <h2>数据保护措施</h2>
@@ -118,25 +136,27 @@
         <li><strong>最小化数据收集：</strong>仅申请应用运行所必须的权限。</li>
         <li><strong>本地优先原则：</strong>用户的核心练习数据优先存储在本地，不上云。</li>
         <li><strong>安全传输：</strong>所有网络请求均使用加密通道。</li>
-        <li><strong>无广告追踪：</strong>应用不包含任何广告 SDK 或用户行为追踪。</li>
+        <li><strong>不用于广告追踪：</strong>应用不包含广告 SDK，不使用 IDFA，不会为了定向广告或广告衡量而将 App 数据与其他公司的 App、网站或线下数据关联。</li>
     </ul>
 
     <h2>用户权限说明</h2>
     <p>为了提供正常服务，应用可能会请求以下权限：</p>
     <ul>
-        <li><strong>网络访问权限：</strong>用于会员购买验证和恢复购买。</li>
+        <li><strong>网络访问：</strong>用于购买与恢复购买、远程配置、A/B 实验、使用分析和崩溃诊断。该访问不需要 iOS 弹窗授权。</li>
     </ul>
 
     <h2>数据保留和删除</h2>
 
     <p><strong>1. 数据保留</strong></p>
     <ul>
-        <li>您的练习数据和设置保存在您的设备上，应用卸载前会一直保留。</li>
+        <li>您的练习数据和设置保存在设备上，应用卸载前会一直保留。</li>
+        <li>Firebase 数据按照 Google/Firebase 的数据保留设置和适用法律保存。我们只在实现分析、配置与稳定性目的所需的期限内使用这些数据。</li>
     </ul>
 
     <p><strong>2. 数据删除</strong></p>
     <ul>
-        <li><strong>卸载即删除：</strong>如果您卸载本应用，保存在设备本地的所有练习记录、错题本及设置将被系统自动删除且无法恢复。</li>
+        <li><strong>本地数据：</strong>如果您卸载本应用，保存在设备本地的练习记录、错题本及设置将被系统删除且无法恢复。</li>
+        <li><strong>Firebase 数据：</strong>App 不提供账号系统，因此没有可供查询的实名账户数据。如需咨询或请求处理与本 App 有关的数据，请通过下方邮箱联系我们。</li>
     </ul>
 
     <h2>隐私政策更新</h2>
@@ -155,14 +175,14 @@
     <h2>适用范围</h2>
     <p>本隐私政策适用于：</p>
     <ul>
-        <li>《打字练习》iOS 客户端应用。</li>
+        <li>《小妙打字通》iOS 客户端应用。</li>
         <li>应用内提供的所有打字练习功能与服务。</li>
     </ul>
 
     <h2>同意声明</h2>
-    <p>下载并使用《打字练习》即表示您同意本隐私政策的所有条款。</p>
+    <p>下载并使用《小妙打字通》即表示您已阅读并理解本隐私政策。</p>
 
-    <p class="date">更新日期：2026年2月6日</p>
+    <p class="date">更新日期：2026年8月20日</p>
 
 </div>
 </body>
